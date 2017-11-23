@@ -101,8 +101,8 @@ gulp.task('browser-sync', function() {
 
 // LiveReload
 gulp.task('watch', ['browser-sync', 'less'], function() {
-  gulp.watch('src/less//*.less', ['less']); // Наблюдение за less файлами
-  gulp.watch('src//*.html', ['html']); // Наблюдение за HTML файлами в проекте
+  gulp.watch('src/less/**/*.less', ['less']); // Наблюдение за less файлами
+  gulp.watch('src/**/*.html', ['html']); // Наблюдение за HTML файлами в проекте
   gulp.watch('src/js/*.js', ['js']); // Наблюдение за JS файлами в папке js
   gulp.watch('src/img/*', ['img']); // Наблюдение за JS файлами в папке js
 });
