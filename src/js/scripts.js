@@ -1,6 +1,17 @@
 $(function (){
   console.log('init');
 
+  $('.nav__toggler').click(function(e){
+    var target = $(this).data('target');
+    $(this).toggleClass('navbar-toggler--active');
+    $('#'+target).toggleClass('nav--active');
+  });
+
+  $('.nav__item--parent').click(function(e){
+    console.log('clicked');
+    $(this).toggleClass('nav__item--active');
+  });
+
   $('.search__toggler').click(function(e){
     console.log('search toggler');
     var target = $(this).data('target');
@@ -23,5 +34,17 @@ $(function (){
   $('.input-group__input').change(function(e){
     $(this).toggleClass('used',$(this).val()!='');
   });1
+
+  $('.tabs__link').click(function(e){
+    var target = $(this).data('target');
+
+    $('.tabs__link').removeClass('tabs__link--active');
+
+    $(this).addClass('tabs__link--active');
+    
+
+    $('.tabs__body').removeClass('tabs__body--active');
+    $('.tabs__body[data-name="'+target+'"]').addClass('tabs__body--active');
+  });
 
 });
