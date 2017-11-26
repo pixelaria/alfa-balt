@@ -90,10 +90,13 @@ body {
 /* HEADER */
 
 .strip {
-  .container {
-    width: 100%;
-    max-width: 1280px;
-  } 
+  @media @desktop-xl {
+    .container {
+      width: 100%;
+      max-width: 1280px;
+    }   
+  }
+  
   height: 45px;
 
   line-height: 45px;
@@ -156,8 +159,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   
   .container {
-    width: 100%;
-    max-width: 1280px;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -166,6 +168,12 @@ body {
     align-content: stretch;
 
     height: 100%;
+    
+    @media @desktop-xl {
+      width: 100%;
+      max-width: 1280px;
+    }
+
   }
 
 
@@ -199,15 +207,28 @@ body {
 
       }
       
+      @media @not-desktop {
+        font-size: 0;
+        padding: 0;
+        width: 130px;
+        height: 81px;
+      }
     }
 
     &--nav {
+      @media @not-desktop {
+        position: absolute;
+        right: 0;
 
+      }
     }
 
     &--callback {
       a {
         display: block;
+      }
+      @media @not-desktop {
+        margin-right: 60px;
       }
     }
   }
@@ -239,8 +260,48 @@ body {
 
     color: #4d4d4d;
   }
+
+  &__toggler {
+    display: none;
+
+    @media @not-desktop {
+      display: block;
+    }
+  }
+
+  @media @not-desktop {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    max-height: 0;
+    height: auto;
+    transition: max-height .25s ease-out;
+    overflow: hidden;
+    z-index: 99;
+    background-color: #fff;
+    width: 100%;
+  }
 }
 
+.navbar-toggler {
+  width: 40px;
+  height: 40px;
+
+  background-color: #f05923;
+  border-radius: 4px;
+  padding: 8px;
+  
+  cursor: pointer;
+
+  &__bar {
+    background: #ffffff;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 6px;
+  }
+}
 
 
 /* PAGE */
@@ -518,19 +579,6 @@ body {
     right: 30px;
     top:10px;
     transition: all 0.5s ease;
-
-    @media @mobiles {
-      width: 100% !important;
-      opacity: 1 !important;
-      z-index: 1 !important;
-      position: relative;
-      right: auto;
-
-      .input {
-        background-color: #f2f5f8;
-        border: 1px solid #999999 !important;
-      }
-    }
   }
 
   &--active {
