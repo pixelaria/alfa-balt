@@ -29,7 +29,33 @@
       <h2 class="section__title">Подбор дизельной электростанции по параметрам</h2>
       <div class="filter">
         <div class="filter__body filter__body--main">
-          <div class="filter_range range">
+          <div class="filter__row">
+            <div class="filter-inline">
+              <p class="filter-inline__title">Мощность:</p>
+              <a href="#" class="filter-inline__link">Основная</a><a href="" class="filter-inline__link filter-inline__link--active">Резервная</a>
+            </div>
+            <div class="filter-inline">
+              <p class="filter-inline__title">Напряжение:</p>
+              <p class="filter-inline__text">380 В, 50 Гц </p>
+            </div>
+          </div>
+          <div class="filter__row">
+            <div class="type-filter">
+              <div class="type-filter__item type-filter__item--active">кВА</div><div class="type-filter__item">кВт</div>
+            </div>
+            <div class="price-filter">
+              <div class="price-filter__item price-filter__item--min">
+                <label for="min-price" class="price-filter__label">От</label>
+                <input id="min-price" name="min-price" type="text" class="price-filter__input" value="500">
+              </div>
+              <div class="price-filter__item price-filter__item--max">
+                <label for="max-price" class="price-filter__label">до</label>
+                <input id="max-price" name="max-price" type="text" class="price-filter__input" value="1400">
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter__range range">
             <div class="range__header">
               <div class="range__point">0</div>
               <div class="range__point">600</div>
@@ -41,12 +67,9 @@
             <div class="range__body" data-start="700" data-end="1900">
               <div class="range__selected"></div>
             </div>
-
-
           </div>
-          <div class="sslider"></div>
-
-          <p class="filter__title">Производитель двигателя</p>
+          
+          <p class="filter__title">Производитель двигателя:</p>
           <div class="filter__checkbox">
             <div class="checkbox">
               <input id="engine" name="engine" type="checkbox" checked class="checkbox__input">  
@@ -294,7 +317,7 @@
         
 
         <div class="form__fields row">
-          <div class="col-md-6">
+          <div class="col-md-4 col-lg-6">
             <div class="input-group">
               <input class="input-group__input" value="" type="text">
               <label class="input-group__label" for="name">ФИО / Компания*</label>               
@@ -308,7 +331,7 @@
               <label class="input-group__label im--email" for="name">E-mail</label>               
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8 col-lg-6">
             <div class="input-group">
               <textarea class="input-group__input input-group__input--text" value="" type="text"></textarea>
               <label class="input-group__label" for="name">Ваш вопрос или предварительная заявка</label>               
