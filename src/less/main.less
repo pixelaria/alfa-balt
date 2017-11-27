@@ -685,6 +685,13 @@ body {
 
     margin-bottom: 40px;
   }
+
+  &__info {
+    @media @mobiles {
+      margin-bottom: 30px;  
+    }
+    
+  }
 }
 
 /* UL, LI, LISTS */
@@ -789,7 +796,9 @@ body {
   }
   
   &--btn {
-
+    @media @mobiles {
+      margin-bottom: 15px;
+    }
   }
 
   &--white {
@@ -840,6 +849,11 @@ body {
   &__link {
     text-decoration: none !important;
     font-weight: 700;
+  }
+
+  @media @mobiles {
+    float: none;
+    text-align: center;
   }
 }
 
@@ -1122,7 +1136,8 @@ body {
   align-content: stretch;
 
   @media @mobiles {
-    display: block;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -1156,7 +1171,6 @@ body {
     }
     @media @mobiles {
       margin-bottom: 30px;
-      background-color: #ffffff;
     }
   }
 
@@ -1190,6 +1204,10 @@ body {
     background-color: #ffffff;
 
     padding:70px 50px;
+
+    @media @mobiles {
+      padding: 35px 25px;
+    }
   }
 
   &__title {
@@ -1198,6 +1216,11 @@ body {
     font-size: 24px;
     font-weight: 700;
     float:left;
+
+    @media @mobiles {
+      float: none;
+      text-align: center;
+    }
   }
 
   &__subtitle {
@@ -1212,6 +1235,13 @@ body {
     &--right {
       width: 350px;
       text-align: right;
+    }
+
+
+    @media @mobiles {
+      float: none;
+      width: auto;
+      text-align: center;
     }
   }
 
@@ -1635,6 +1665,7 @@ body {
     }
     
     @media @mobiles {
+      margin-bottom: 30px;
       display: block;
     }
   }
@@ -1651,36 +1682,131 @@ body {
   font-weight: 400;
   margin-bottom: 40px;
   
+
+
+  
   &__info {
-    float: left;
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
   }
 
-  &__social {
-    float: right;
+  &__contacts {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }    
+  }
+
+
+  @media @mobiles {
+    text-align: center;
+
+    &__name,&__phone, &__desc, &__social {
+      float: none;
+    }
   }
 
 
   &__name {
+    float: left;
     margin-top: 0;
     margin-bottom: 15px;
   }
 
   &__desc {
     margin: 0;
-    
+    float: left;
     font-size: 14px;
     font-weight: 400;
     line-height: 28px;
+
+    margin-bottom: 15px;
     
   }
   
+  &__phone {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    float: right;
+  }
+
+  &__social {
+    float: right;
+    text-align: right;
+    
+    @media @mobiles {
+      text-align: center;
+    }
+  }
+
+
   
+}
 
+.social {
+  padding: 0;
+  margin: 0;
 
-  &::after {
+  &__item {
+    display: inline-block;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    width: 28px;
+    height: 28px;
     display: block;
-    content: "";
-    clear: both;
+    
+    background-size: contain;
+    background-position: center;
+
+    cursor: pointer;
+    
+    border-radius: 8px;
+
+    &--fb {
+      background-image: url('../img/social-facebook.png');  
+      &:hover {
+        background-image: url('../img/social-facebook.png');  
+      }
+    }
+
+    &--vk {
+      background-image: url('../img/social-vk.png');  
+      &:hover {
+        background-image: url('../img/social-vk.png');  
+      }
+    }
+
+    &--yb {
+      background-image: url('../img/social-youtube.png');  
+      &:hover {
+        background-image: url('../img/social-youtube.png');  
+      }
+    }
+
+    &--ig {
+      background-image: url('../img/social-instagram.png');  
+      &:hover {
+        background-image: url('../img/social-instagram.png');  
+      }
+    }
+
+    &--ok {
+      background-image: url('../img/social-ok.png');  
+      &:hover {
+        background-image: url('../img/social-ok.png');  
+      }
+    }
   }
 }
 
@@ -1688,7 +1814,12 @@ body {
   color: #838383;
   font-size: 14px;
   font-weight: 400;
+  line-height: 21px;
   margin-bottom: 15px;
+
+  @media @mobiles {
+    text-align: center;
+  }
 }
 .links {
 
