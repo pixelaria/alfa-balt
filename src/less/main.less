@@ -912,6 +912,15 @@ body {
       margin-bottom: 0;
     }
   }
+
+  &--tag {
+    width: 80px;
+    height: 80px;
+
+    background-image: url('../img/tag.png');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 /* LINKS */
@@ -972,6 +981,17 @@ body {
       width: 20px;
       height: 20px;
     }
+  }
+
+  &--download {
+    display: inline-block;
+    background-image: url('../img/download.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+
+    border:none;
   }
 }
 
@@ -1560,6 +1580,9 @@ body {
       position:absolute;
       left:0;
       top:0;
+      bottom: 0;
+      margin: auto;
+
       width:25px;
       height:25px;
       
@@ -1579,6 +1602,10 @@ body {
       opacity: 0;
       transform:scale(0);
       background-image: url('../img/checked.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
       transition: all 0.25s ease-out;
     }
 
@@ -1602,6 +1629,29 @@ body {
     border: 1px solid #ed7144;
     transition: all 0.25s ease-in; 
   }
+
+
+  &--small {
+    margin-bottom: 0;
+
+    .checkbox__label {
+      font-size: 12px;
+      padding-left: 20px;
+      
+
+      &:before {
+        width: 13px;
+        height: 13px;
+      }
+
+      &:after {
+        width: 10px;
+        height: 10px; 
+        left: 2px;
+        top: 8px;
+      }
+    }
+  }
 }
 
 
@@ -1621,6 +1671,9 @@ body {
   align-items: stretch;
   align-content: stretch;
   
+
+  margin-bottom: 30px;
+
   @media @not-desktop {
     display: block;
     border-radius: 0;
@@ -1875,6 +1928,165 @@ body {
     margin-bottom: 15px;
   }
 }
+
+
+.table {
+  margin-bottom: 40px;
+  &__row {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+  }
+
+  &__head {
+    height: 100px;
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.3);
+    border-radius: 8px;
+    background-image: linear-gradient(180deg, #6d6d6d 0%, #4d4d4d 100%);
+    
+    color:#ffffff;
+    font-size: 16px;
+    font-weight: 400;
+
+  }
+  &__hr {
+
+  }
+
+
+  &__cell {
+    height: 80px;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction:column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    box-shadow: 0 2px 4px rgba(128, 128, 128, 0.3);
+    border-radius: 8px;
+    background-color: #ffffff;
+
+    
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--row {
+      flex-direction:row;
+      justify-content:flex-start;
+    }
+
+    &--hr {
+      width: 100% !important;
+      height: auto;
+
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      margin: 15px 0;
+      padding: 0;
+      color: #3c3c3c;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+
+    }
+    &--th {
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      margin: 0;
+      height: 100px;
+
+      text-align: center;
+    }
+    &:nth-child(1) {width: 40%;}
+    &:nth-child(2) {width: 9%;}
+    &:nth-child(3) {width: 9%;}
+    &:nth-child(4) {width: 22%;}
+    &:nth-child(5) {width: 9%;}
+    &:nth-child(6) {width: 9%;}
+  }
+  &__results {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.product-row {
+  &__img {
+    margin-right: 15px;
+    cursor: pointer;
+
+
+    &:hover+.product-row__desc {
+      .product-row__name {
+        color: #ed7144;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 0px;
+
+    color: #4d4d4d;
+
+    text-decoration: none;
+    border: none;
+
+    &:hover {
+      color: #ed7144;
+    }
+  }
+  &__power {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__engine {
+    position: relative;
+    padding-left: 35px;
+    
+    margin: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top:0;
+      bottom:0;
+      margin: auto;
+
+      width: 22px;
+      height: 16px;
+    }
+
+    &--sweden:before {
+
+      background-image: url('../img/sweden.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+
+
+
+
+
+
+
 
 /* accordeon */
 
