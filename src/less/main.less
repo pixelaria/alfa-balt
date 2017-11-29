@@ -9,6 +9,12 @@
 body {
   font-family: "Exo 2", "Arial", sans-serif;
   color: #4d4d4d;
+
+  min-width: 320px !important;
+
+}
+html {
+  min-width: 320px !important;
 }
 
 
@@ -59,6 +65,15 @@ body {
     background-repeat: no-repeat; 
   }
   
+  &--angles {
+    background-color: #ffffff;
+
+    background-image: url('../img/section-angles-bg.png');
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat; 
+  } 
+   
 
   &--filter {
     background-color: #f8f8f8;
@@ -98,6 +113,12 @@ body {
     font-size: 24px;
     font-weight: 400;
     line-height: 42px;
+    
+    margin-top: 0;
+
+    &--white {
+      color:#ffffff;
+    }
   }
 
   &__text {
@@ -109,6 +130,8 @@ body {
 
 
 .container {
+
+
   &:after {
     display: block;
     content: "";
@@ -122,6 +145,20 @@ body {
   }
 }
 
+
+.hidden {
+
+  &--tablet {
+    @media @tablet {
+      display: none;
+    }
+  }
+  &--mobiles {
+    @media @mobiles {
+      display: none;
+    }
+  }
+}
 .img {
   &--auto {
     width: auto;
@@ -1335,6 +1372,46 @@ body {
   border-left: 6px solid #ed7144;
 }
 
+
+
+
+/* ASIDE */
+.aside {
+  margin-bottom: 30px;
+  border-radius: 16px;
+  border: solid 1px #d4d4d4;
+  
+  padding: 40px 30px;
+  
+  max-width: 320px;
+  &__title {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 28px;
+    color: #4d4d4d;
+    text-decoration: none;
+    &:hover {
+      color: #ed7144;
+    }
+  }
+}
+
+
 /* TYPES */
 
 
@@ -1409,6 +1486,147 @@ body {
   }
 }
 
+
+
+/* ADVANTAGES */
+
+.advantages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  margin-bottom: -60px;
+
+  @media @mobiles {
+    flex-direction: column;
+  }
+  &__item {
+    width: 33%;
+    
+    @media @mobiles {
+      width: 100%;
+      margin-bottom: 30px;
+      &:nth-child(1) { order:1;}
+      &:nth-child(4) { order:2;}
+      &:nth-child(2) { order:3;}
+      &:nth-child(3) { order:4;}
+      
+    }
+
+    @media @tablet {
+      width: 50%;
+    }
+  }
+}
+
+.advantage {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+
+
+  color: #ffffff;
+  margin-bottom: 60px;
+  
+  &__number {
+    font-size: 72px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 15px;
+
+  }
+
+  &__link,&__text {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    transition: color 0.3s ease;
+    &:hover {
+      color: #ed7144;
+    }
+  }
+}
+
+.keys {
+  &__item {
+    position: relative;
+    padding-left: 200px;
+    margin-bottom: 40px;
+    
+    min-height: 160px;
+    
+    &:before {
+      content: '';
+      width: 160px;
+      height: 160px;
+      
+      position: absolute;
+      left: 0;
+
+      background-color: #ffffff;
+      border-radius: 16px;
+      
+      background-position: center;
+      
+      background-repeat: no-repeat;
+    }
+
+    &--chair {
+      &:before{background-image: url('../img/chair.png');}
+    }
+    &--euro {
+      &:before{background-image: url('../img/euro.png');}
+    }
+
+    &--map {
+      &:before{background-image: url('../img/map.png');}
+    }
+
+    @media @desktop-xl {
+      &:nth-child(2) {
+        margin-left: 100px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 200px; 
+      }
+    }
+
+    @media @mobiles {
+      padding-left: 0;
+      padding-top: 175px;
+
+      &:before {
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+  
+  &__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 
 
 .form {
@@ -2081,7 +2299,30 @@ body {
 }
 
 
+/* SLIDER */
 
+.slider {
+
+  &__image {
+
+  }
+
+  &__item {
+
+  }
+
+  &__desc {
+
+  }
+
+  &__title {
+
+  }
+
+  &__text {
+
+  }
+}
 
 
 
