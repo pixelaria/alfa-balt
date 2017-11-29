@@ -17,7 +17,10 @@ html {
   min-width: 320px !important;
 }
 
-
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 /* GRID */
 
@@ -125,6 +128,7 @@ html {
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
+    margin-bottom: 25px;
   }
 }
 
@@ -1395,6 +1399,30 @@ html {
     font-size: 24px;
     margin-top: 0;
     margin-bottom: 15px;
+
+    &--link {
+      position: relative;
+      display: block;
+      margin-bottom: 0;
+
+      &:after {
+        content: '';
+        position: absolute;  
+        width: 52px;
+        height: 52px;
+
+        right: 0;
+        top:-15px;
+        
+        background-color: #ed7144;
+        border-radius: 16px;
+        background-image: url('../img/icon-play.png');
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      
+
+    }
   }
 
   &__list {
@@ -1415,9 +1443,235 @@ html {
     &:hover {
       color: #ed7144;
     }
+
+
   }
 }
 
+/* INDUSTRIES */
+
+.industries {
+  margin-top: 60px;
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    color: #3c3c3c;
+    font-size: 16px;
+    font-weight: 700;
+    min-width: 200px;
+
+    @media @mobiles {
+      min-width: 150px;
+    }
+  }
+
+  &__clients {
+  
+  }
+
+  &__client {
+
+  }
+}
+
+.client {
+  position: relative;
+
+  font-weight: 400;
+  color: #3c3c3c;
+  
+  box-shadow: 0 2px 4px rgba(128, 128, 128, 0.3);
+  border: 1px solid #dfdfdf;
+  border-radius: 16px;
+  background-color: #ffffff;
+
+  width: 150px;
+  height: 120px;
+  
+  cursor: pointer;
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 5px;
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &__info {
+    background-color: #f8f8f8;
+    z-index: 2;
+    width: 100%;
+    
+    position: absolute;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 0 15px;
+    overflow: hidden;
+
+
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-out;
+
+  }
+
+  &__img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  
+    z-index: 1;
+  }
+
+  &:hover {
+    .client__info {
+      transition: all 0.35s ease-in;
+      visibility: visible;
+      opacity: 1;
+      max-height: 120px;
+      height: 120px;
+
+      padding: 15px;
+
+    }
+  }
+  
+
+  @media @tablet {
+    &:nth-child(5),&:nth-child(6) {
+      display: none;
+    }
+  }
+
+  @media @mobile {
+    &:nth-child(4),&:nth-child(5),&:nth-child(6) {
+      display: none;
+    } 
+  } 
+  
+  @media @mobile-xs {
+    display: none;
+    &:nth-child(2) {
+      display: block !important;
+    }
+  }
+}
+
+/* TILES */
+.tiles {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  @media @not-desktop {
+    display: block;
+  }
+  &__item {
+    width: 43%;
+    max-width: 438px;
+
+    &:nth-child(2) {
+      margin-top: 75px;
+      margin-bottom: 100px;
+    }
+
+    &:nth-child(3) {
+      margin-top: -175px;
+    }
+
+    @media @not-desktop {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0 !important;
+      margin-bottom: 90px !important;
+    }
+  } 
+}
+
+.tile {
+  position: relative;
+  
+  box-shadow: 0 2px 4px rgba(128, 128, 128, 0.3);
+  border-radius: 16px;
+  border: 1px solid #dfdfdf;
+  background-color: #ffffff;
+  
+  padding: 40px 40px 40px 40px;
+  
+  
+  
+
+  
+  &:before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: -40px;
+    width: 120px;
+    height: 120px;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media @mobile-xs {
+      content: none;
+    }
+  }
+  
+  &--key:before {
+    background-image: url('../img/tiles-key.png');
+  }
+  &--medal:before {
+    background-image: url('../img/tiles-medal.png');
+  }
+  &--shield:before {
+    background-image: url('../img/tiles-shield.png');
+  }
+  &--gear:before {
+    background-image: url('../img/tiles-gear.png');
+  }
+
+  &__title {
+    color: #3c3c3c;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+
+  }
+
+  &__text {
+    color: #3c3c3c;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
 
 /* TYPES */
 
