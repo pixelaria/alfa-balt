@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Альфа Балт Инжиниринг</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Exo+2&amp;subset=cyrillic" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/bundle.css">
+
+</head>
+<body>
+
+<div class="strip">
+  <div class="container">
+    <ul class="strip__items">
+      <li class="strip__item"><a href="email-to:info@abespb.ru" class="link link--white link--email">info@abespb.ru</a></li>
+      <li class="strip__item">Санкт-Петербург,  Муринcкая дорога, 23</li>
+    </ul>
+    <div id="search" class="strip__search search">
+      <div class="search__toggler" data-target="search">Поиск продукции</div>
+      <input type="text" class="input search__input">
+    </div>  
+  </div>
+  
+</div>
+<header class="header">
+  <div class="container">
+    <a class="header__item header__item--logo" title="Производство дизельных электростанций" href="/">
+      Производство дизельных<br>электростанций
+    </a>
+    <nav class="header__item header__item--nav">
+      <div id="nav" class="nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--parent">
+            <a href="#" class="nav__link link">Продукция</a>
+            <div class="dropdown">
+              <ul class="dropdown__inner">
+                <li class="dropdown__block">
+                  <a href="#" class="dropdown__title ">Каталог продукции</a>
+                  <ul class="dropdown__list">
+                    <li class="dropdown__item"><a href="#" class="dropdown__link">Дизельные электростанции</a></li>
+                    <li class="dropdown__item"><a href="#" class="dropdown__link">Газопоршневые станции</a></li>
+                    <li class="dropdown__item"><a href="#" class="dropdown__link">Электростанции в контейнере</a></li>
+                    <li class="dropdown__item"><a href="#" class="dropdown__link">Электростанции в кожухе</a></li>
+                    <li class="dropdown__item"><a href="#" class="dropdown__link">Осветительные мачты</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav__item nav__item--parent"><a href="#" class="nav__link link">Услуги</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link">О компании</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link">Реализованные проекты</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link">Контакты</a></li>  
+        </ul>
+      </div>
+      <div class="nav__toggler navbar-toggler" data-target="nav">
+        <span class="navbar-toggler__bar"></span>
+        <span class="navbar-toggler__bar"></span>
+        <span class="navbar-toggler__bar"></span>
+        <span class="navbar-toggler__bar"></span>
+      </div>
+    </nav>
+
+    <div class="header__item header__item--callback callback">
+      <a href="#" class="callback__link">Заказать звонок</a>
+      <a href="tel:88123376820" class="callback__phone phone phone--big"><span class="phone__code">+7 (812)</span> 337-68-20</a>
+    </div>  
+  </div>
+</header>
+<main>
+  <section class="section section--page">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Каталог продукции</a></li>
+        <li class="breadcrumbs__item">Дизельные электростанции</li>
+      </ul>
+      <div class="page row">
+        <div class="page__info col-md-8 col-lg-7">
+          <h1 class="page__title">Дизель-генераторные установки АБИН</h1>
+          <p class="page__subtitle">Дизельная электростанция — это автономный источник электроснабжения стационарного или передвижного типа на базе дизельного двигателя и генератора переменного тока.</p>
+
+          <a class="btn btn--orange">Получить консультацию</a>
+          <a href="#" class="btn btn--tr">Скачать опросный лист</a>
+        </div>
+        <div class="page__image col-md-4 col-lg-5">
+          <img src="./img/diesel-power-station.png" alt="Бухгалтерия" class="img img--responsive">
+        </div>
+      </div>
+    
+    </div>
+  </section>
+  <section class="section section--filter">
+    <div class="container">
+      <h2 class="section__title">Подбор дизельной электростанции по параметрам</h2>
+      <div class="filter">
+        <div class="filter__body filter__body--main">
+          <div class="filter__row">
+            <div class="filter-inline">
+              <p class="filter-inline__title">Мощность:</p>
+              <a href="#" class="filter-inline__link">Основная</a><a href="" class="filter-inline__link filter-inline__link--active">Резервная</a>
+            </div>
+            <div class="filter-inline">
+              <p class="filter-inline__title">Напряжение:</p>
+              <p class="filter-inline__text">380 В, 50 Гц </p>
+            </div>
+          </div>
+          <div class="filter__row">
+            <div class="type-filter">
+              <div class="type-filter__item type-filter__item--active">кВА</div><div class="type-filter__item">кВт</div>
+            </div>
+            <div class="price-filter">
+              <div class="price-filter__item price-filter__item--min">
+                <label for="min-price" class="price-filter__label">От</label>
+                <input id="min-price" name="min-price" type="text" class="price-filter__input" value="500">
+              </div>
+              <div class="price-filter__item price-filter__item--max">
+                <label for="max-price" class="price-filter__label">до</label>
+                <input id="max-price" name="max-price" type="text" class="price-filter__input" value="1400">
+              </div>
+            </div>
+          </div>
+          
+          <div class="filter__range range">
+            <div class="range__header">
+              <div class="range__point">0</div>
+              <div class="range__point">600</div>
+              <div class="range__point">1200</div>
+              <div class="range__point">1800</div>
+              <div class="range__point">2400</div>
+              <div class="range__point">3000</div>
+            </div>
+            <div class="range__body" data-start="700" data-end="1900">
+              <div class="range__selected"></div>
+            </div>
+          </div>
+          
+          <p class="filter__title">Производитель двигателя:</p>
+          <div class="filter__checkbox">
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" checked class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Doosan</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Deutz</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">MTU</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">John Deere</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Iveco</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Yanmar</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Perkins</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" checked class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Volvo Penta</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Cummins</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Fawde</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Kohler</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">Mitsubishi</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">ЯМЗ</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">ТМЗ</label>
+            </div>
+            <div class="checkbox">
+              <input id="engine" name="engine" type="checkbox" class="checkbox__input">  
+              <label class="checkbox__label" for="engine">ММЗ</label>
+            </div>
+          </div>
+          <div class="filter__buttons">
+            <a href="#" class="btn btn--orange">Подобрать</a><a href="#" class="btn btn--tr">Очистить фильтр</a>
+          </div>
+        </div>
+        <div class="filter__body filter__body--sub">
+          <p class="filter__title">Быстрый переход к категории:</p>
+          <div class="accordeon accordeon--filter">
+            <div class="accordeon__preview">
+              <div class="accordeon__title">От 5 до 50 кВт</div>  
+            </div>
+            <div class="accordeon__body">
+              <div class="filter__links">
+                <a href="#" class="filter__link">5 кВт</a>
+                <a href="#" class="filter__link">10 кВт</a>
+                <a href="#" class="filter__link">15 кВт</a>
+                <a href="#" class="filter__link">20 кВт</a>
+                <a href="#" class="filter__link">25 кВт</a>
+                <a href="#" class="filter__link">30 кВт</a>
+                <a href="#" class="filter__link">35 кВт</a>
+                <a href="#" class="filter__link">40 кВт</a>
+                <a href="#" class="filter__link">45 кВт</a>
+                <a href="#" class="filter__link">50 кВт</a>
+              </div>
+            </div>
+          </div>
+          <div class="accordeon accordeon--filter accordeon--active">
+            <div class="accordeon__preview">
+              <div class="accordeon__title">От 50 до 100 кВт</div>  
+            </div>
+            <div class="accordeon__body">
+              <div class="filter__links">
+                <a href="#" class="filter__link">50 кВт</a>
+                <a href="#" class="filter__link">55 кВт</a>
+                <a href="#" class="filter__link">60 кВт</a>
+                <a href="#" class="filter__link">65 кВт</a>
+                <a href="#" class="filter__link">70 кВт</a>
+                <a href="#" class="filter__link">75 кВт</a>
+                <a href="#" class="filter__link">80 кВт</a>
+                <a href="#" class="filter__link">85 кВт</a>
+                <a href="#" class="filter__link">90 кВт</a>
+                <a href="#" class="filter__link">95 кВт</a>
+                <a href="#" class="filter__link">100 кВт</a>
+              </div>
+            </div>
+          </div>
+          <div class="accordeon accordeon--filter">
+            <div class="accordeon__preview">
+              <div class="accordeon__title">От 100 до 1000 кВт</div>  
+            </div>
+            <div class="accordeon__body">
+              <div class="filter__links">
+                <a href="#" class="filter__link">100 кВт</a>
+                <a href="#" class="filter__link">110 кВт</a>
+                <a href="#" class="filter__link">120 кВт</a>
+                <a href="#" class="filter__link">150 кВт</a>
+                <a href="#" class="filter__link">160 кВт</a>
+                <a href="#" class="filter__link">180 кВт</a>
+                <a href="#" class="filter__link">200 кВт</a>
+                <a href="#" class="filter__link">210 кВт</a>
+                <a href="#" class="filter__link">220 кВт</a>
+                <a href="#" class="filter__link">250 кВт</a>
+                <a href="#" class="filter__link">300 кВт</a>
+                <a href="#" class="filter__link">320 кВт</a>
+                <a href="#" class="filter__link">350 кВт</a>
+                <a href="#" class="filter__link">400 кВт</a>
+                <a href="#" class="filter__link">450 кВт</a>
+                <a href="#" class="filter__link">500 кВт</a>
+                <a href="#" class="filter__link">600 кВт</a>
+                <a href="#" class="filter__link">700 кВт</a>
+                <a href="#" class="filter__link">800 кВт</a>
+                <a href="#" class="filter__link">900 кВт</a>
+              </div>
+            </div>
+          </div>
+          <div class="accordeon accordeon--filter">
+            <div class="accordeon__preview">
+              <div class="accordeon__title">От 1 МВт</div>  
+            </div>
+            <div class="accordeon__body">
+              <div class="filter__links">
+                <a href="#" class="filter__link">1 МВт</a>
+                <a href="#" class="filter__link">1.2 МВт</a>
+                <a href="#" class="filter__link">1.4 МВт</a>
+                <a href="#" class="filter__link">2 МВт</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="table">
+        <div class="table__head">
+          <div class="table__row table__row--th">
+            <div class="table__cell table__cell--th">Модель ДЭС</div>
+            <div class="table__cell table__cell--th hidden--mobiles">Основная</div>
+            <div class="table__cell table__cell--th hidden--mobiles">Резервная</div>
+            <div class="table__cell table__cell--th hidden--mobiles">Модель двигателя</div>
+            <div class="table__cell table__cell--th hidden--tablet">Скачать брошюру</div>
+            <div class="table__cell table__cell--th hidden--mobiles">Узнать цену</div>
+          </div>
+        </div>
+        <div class="table__body">
+          <div class="table__row">
+            <div class="table__cell table__cell--hr">— 5 кВт —</div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-1.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX XXXX XXXX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-2.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-3.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+          <div class="table__row">
+            <div class="table__cell table__cell--hr">— 10 кВт —</div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-1.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX XXXX XXXX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-2.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-3.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-1.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX XXXX XXXX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-2.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+          <div class="table__row product-row">
+            <div class="table__cell table__cell--row">
+              <div class="product-row__img"><img src="./img/product-small-3.png" alt="" class="img img--responsive"></div>
+              <div class="product-row__desc">
+                <a href="#" class="product-row__name">ДЭС АБИН XX XX XXXX</a>
+                <div class="checkbox checkbox--small product-row__checkbox">
+                  <input id="product" name="product"  class="checkbox__input" type="checkbox">  
+                  <label class="checkbox__label" for="product">сравнить</label>
+                </div>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Основная мощность:</div>
+                <p class="power__item">5 кВт</p>
+                <p class="power__item">6 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <div class="product-row__power power">
+                <div class="power__text">Резервная мощность:</div>
+                <p class="power__item">4,5 кВт</p>
+                <p class="power__item">5,5 кВА</p>
+              </div>
+            </div>
+            <div class="table__cell">
+              <p class="product-row__engine product-row__engine--sweden"><span>Двигатель: </span>Scania DC13 072A</p>
+            </div>
+            <div class="table__cell hidden--tablet"><a href="#" class="link link--download"></a></div>
+            <div class="table__cell table__cell--clear"><a href="#" class="btn btn--orange btn--tag product-row__tag">Узнать цену</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="table__info">
+        <p class="table__info--results"> По заданным параметрам <span>найдено 75 электростанций</span> </p>
+        <div class="table__info--clear"><a href="#" class="link link--orange">Изменить условия отбора</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--pixelized">
+    <div class="container">
+      <div class="tabs">
+        <div class="tabs__header">
+          <ul class="tabs__list">
+            <li class="tabs__link tabs__link--active" data-target="tab-1">Основы выбора</li>
+            <div class="tabs__body tabs__body--active" data-name="tab-1">
+              <h3 class="tabs__title">Основной или резервный</h3>
+              <p class="tabs__text">В роли основных источников электроснабжения дизельные электростанции служат на объектах,  нуждающихся в стабильном автономном энергообеспечении на постоянной основе, находясь в отдалении от сети питания: строительные площадки, частное строительство, строительство трубопроводных систем, производственные цеха, вахтовые посёлки, фермы, буровые и т.п. </p>
+              <p class="tabs__text"><img class="tabs__image" src="./img/tab-image.png" alt="@">В качестве резервных (вспомогательных) источников электроснабжения дизель-генераторы и электростанции вводятся в эксплуатацию на объектах, испытывающих потребность в надежном электропитании и бесперебойной работе: банки, больницы, стадионы, гостиницы, госучреждения, торговые центры,  промышленные концерны, школы и т.п.
+              </p>
+            </div>
+            <li class="tabs__link" data-target="tab-2">Модельный ряд</li>
+            <div class="tabs__body" data-name="tab-2">
+              <h3 class="tabs__title">Модельный ряд</h3>
+              <p class="tabs__text">В роли основных источников электроснабжения дизельные электростанции служат на объектах,  нуждающихся в стабильном автономном энергообеспечении на постоянной основе, находясь в отдалении от сети питания: строительные площадки, частное строительство, строительство трубопроводных систем, производственные цеха, вахтовые посёлки, фермы, буровые и т.п. </p>
+              <p class="tabs__text"><img class="tabs__image" src="./img/tab-image.png" alt="@">В качестве резервных (вспомогательных) источников электроснабжения дизель-генераторы и электростанции вводятся в эксплуатацию на объектах, испытывающих потребность в надежном электропитании и бесперебойной работе: банки, больницы, стадионы, гостиницы, госучреждения, торговые центры,  промышленные концерны, школы и т.п.
+              </p>
+            </div>
+            <li class="tabs__link" data-target="tab-3">Исполнение и опции</li>
+            <div class="tabs__body" data-name="tab-3">
+              <h3 class="tabs__title">Исполнение и опции</h3>
+              <p class="tabs__text">В роли основных источников электроснабжения дизельные электростанции служат на объектах,  нуждающихся в стабильном автономном энергообеспечении на постоянной основе, находясь в отдалении от сети питания: строительные площадки, частное строительство, строительство трубопроводных систем, производственные цеха, вахтовые посёлки, фермы, буровые и т.п. </p>
+              <p class="tabs__text"><img class="tabs__image" src="./img/tab-image.png" alt="@">В качестве резервных (вспомогательных) источников электроснабжения дизель-генераторы и электростанции вводятся в эксплуатацию на объектах, испытывающих потребность в надежном электропитании и бесперебойной работе: банки, больницы, стадионы, гостиницы, госучреждения, торговые центры,  промышленные концерны, школы и т.п.
+              </p>
+            </div>
+            <li class="tabs__link" data-target="tab-4">Решения на ДЭС АБИН</li>
+            <div class="tabs__body" data-name="tab-4">
+              <h3 class="tabs__title">Решения на ДЭС АБИН</h3>
+              <p class="tabs__text">В роли основных источников электроснабжения дизельные электростанции служат на объектах,  нуждающихся в стабильном автономном энергообеспечении на постоянной основе, находясь в отдалении от сети питания: строительные площадки, частное строительство, строительство трубопроводных систем, производственные цеха, вахтовые посёлки, фермы, буровые и т.п. </p>
+              <p class="tabs__text"><img class="tabs__image" src="./img/tab-image.png" alt="@">В качестве резервных (вспомогательных) источников электроснабжения дизель-генераторы и электростанции вводятся в эксплуатацию на объектах, испытывающих потребность в надежном электропитании и бесперебойной работе: банки, больницы, стадионы, гостиницы, госучреждения, торговые центры,  промышленные концерны, школы и т.п.
+              </p>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <div class="section section--tech">
+    <div class="container">
+      <div class="types">
+        <div class="types__item type">
+          <div class="type__img">
+            <img src="./img/des-container.png" alt="" class="img img--responsive">
+          </div>
+          <div class="type__title">ДЭС в контейнере</div>
+        </div>
+        <div class="types__item type">
+          <div class="type__img">
+            <img src="./img/des-casing.png" alt="" class="img img--responsive">
+          </div>
+          <div class="type__title">ДЭС в кожухе</div>
+        </div>
+        <div class="types__item type">
+          <div class="type__img">
+            <img src="./img/des-movable.png" alt="" class="img img--responsive">
+          </div>
+          <div class="type__title">Передвижные ДЭС</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section section--dune">
+    <div class="container">
+      <h2 class="section__title">Конструкция дизельной электростанции</h2>
+      <p class="section__text">Дизельные электростанции объединяют в себе генератор переменного тока и двигатель внутреннего сгорания, также стальную раму, на которой он закреплен, систему контроля и управления установкой. При работе двигателя внутреннего сгорания приводиться в движение синхронный или асинхронный электрический генератор. Соединение двигателя дизельной электростанции и электрического генератора производится либо напрямую фланцем, либо через демпферную муфту. В первом случае используется двухопорный генератор (генератор, имеющий два опорных подшипника). Во втором — с одним опорным подшипником (одноопорный).</p>
+      <p class="section__text">Дизельные электростанции, как и прочие, различаются по выдаваемой электрической мощности; виду тока (переменный 3-фазный/однофазный, постоянный); выходному напряжению (230, 480…В) и по частоте тока (50, 60, 400… Гц).</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Виды дизельных электростанций</h2>
+      <p class="section__text">Различают стационарные и передвижные ДЭС. На стационарных, не перемещаемых, дизельных электростанциях, обычно устанавливают четырёхтактные дизели мощностью 110, 220, 330, 440 и 735 квт. К примеру, стационарные ДЭС средней мощности выдают - 750 квт, большие дизельные генераторы сооружаются мощностью до 2200 квт и более.</p>
+      <h2 class="section__title">Основные преимущества использования дизельных генераторов</h2>
+      <p class="section__text">
+        Из всех преимуществ дизельных электростанций можно выделить высокую экономичность, устойчивую работу, лёгкий и быстрый запуск. Из недостатков: средний срок работы агрегата до капитального ремонта. ДЭС предназначены для электроснабжения мест, удалённых от линий электропередач, таких как базы отдыха, санатории, отдаленные районы, где необходим энергоресурс.        
+      </p>
+      <p class="section__text">
+        Стационарные дизельные генераторы комплектуются главным образом синхронными генераторами. Экономичность дизельной электростанции значительно повышена в современных дизелях за счёт использования тепловых потерь двигателей до 55—60% от общего количества выделяемого тепла. На всех дизельных генераторах производства ООО «Альфа Балт Инжиниринг» предусматривается система автоматической защиты агрегатов при достижении предельных значений температуры охлаждающей воды и масла, давления масла, частоты вращения или при возникновении короткого замыкания в линии.
+      </p>
+
+    </div>
+  </section>
+  <section class="section section--question">
+    <div class="container">
+      <div class="form form--callback">
+        <div class="form__info">
+          <h2 class="form__title">Остались вопросы?</h2>
+          <p class="form__subtitle form__subtitle--right">Заполните форму <br>или позвоните по телефону +7 (812) 337-68-20</p>  
+        </div>
+        
+
+        <div class="form__fields row">
+          <div class="col-md-4 col-lg-6">
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label" for="name">ФИО / Компания*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input im--phone" value="" type="text">
+              <label class="input-group__label" for="name">Телефон*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label im--email" for="name">E-mail</label>               
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6">
+            <div class="input-group">
+              <textarea class="input-group__input input-group__input--text" value="" type="text"></textarea>
+              <label class="input-group__label" for="name">Ваш вопрос или предварительная заявка</label>               
+            </div>
+            <div class="form__buttons">
+              <a class="link link--btn link--icon link--file">Прикрепить файл</a>
+              <button class="btn btn--orange">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__links">
+      <div class="links">
+        <div class="links__title">Продукция</div>
+        <ul class="links__list list">
+          <li class="list__item"><a href="#" class="list__link">Дизельные электростанции</a></li>
+          <li class="list__item"><a href="#" class="list__link">Контейнеры и кожухи</a></li>
+          <li class="list__item"><a href="#" class="list__link">Осветительные мачты</a></li>
+          <li class="list__item"><a href="#" class="list__link">Газопоршневые электростанции</a></li>
+          <li class="list__item"><a href="#" class="list__link">Запчасти и комплектующие</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <div class="links__title">Услуги</div>
+        <ul class="links__list list">
+          <li class="list__item"><a href="#" class="list__link">Проектирование</a></li>
+          <li class="list__item"><a href="#" class="list__link">Производство</a></li>
+          <li class="list__item"><a href="#" class="list__link">Мониторинг</a></li>
+          <li class="list__item"><a href="#" class="list__link">Монтаж</a></li>
+          <li class="list__item"><a href="#" class="list__link">Обучение</a></li>
+          <li class="list__item"><a href="#" class="list__link">Обслуживание</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <div class="links__title">Компания</div>
+        <ul class="links__list list">
+          <li class="list__item"><a href="#" class="list__link">О нас</a></li>
+          <li class="list__item"><a href="#" class="list__link">Отзывы</a></li>
+          <li class="list__item"><a href="#" class="list__link">Сертификаты</a></li>
+          <li class="list__item"><a href="#" class="list__link">Клиенты</a></li>
+          <li class="list__item"><a href="#" class="list__link">Вакансии</a></li>
+          <li class="list__item"><a href="#" class="list__link">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="links">
+        <div class="links__title">Прочее</div>
+        <ul class="links__list list">
+          <li class="list__item"><a href="#" class="list__link">Реализованные проекты</a></li>
+          <li class="list__item"><a href="#" class="list__link">Отраслевые решения</a></li>
+          <li class="list__item"><a href="#" class="list__link">Пресс-центр</a></li>
+          <li class="list__item"><a href="#" class="list__link">Документы и Брошюры</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__company">
+      <div class="company">
+        <div class="company__info">
+          <p class="company__name">ООО «Альфа Балт Инжиниринг», 2003-2017</p>
+          <div class="company__phone">тел. +7 (812) 337-68-20</div>
+        </div>
+        <div class="company__contacts">
+          <ul class="company__list">
+            <li class="company__item">Спб, Муринская дорога, 23</li>
+            <li class="company__item">info@abesbp.ru</li>
+          </ul> 
+          <ul class="company__social social">
+            <li class="social__item"><a href="#" class="social__link social__link--fb"></a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--vk"></a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--yb"></a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--ig"></a></li>
+            <li class="social__item"><a href="#" class="social__link social__link--ok"></a></li>
+          </ul>
+          
+        </div>
+        
+      </div>
+
+      <p class="offert">Информация на сайте не является публичной офертой. Копирование без разрешения запрещено.</p>
+    </div>
+    <div class="footer__copyright copyright">
+      <ul class="copyright__links">
+        <li class="copyright__item"><a href="#" class="copyright__link">Политика конфиденциальности</a></li>
+        <li class="copyright__item"><a href="#" class="copyright__link">Карта сайта</a></li>
+      </ul>
+      <div class="copyright__develop develop">
+        <p class="develop__text">
+          Разработано в <a href="http://pixelaria.ru" targer="_blank" class="link link--orange develop__link">Pixelaria</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="./js/libs.min.js"></script>
+<script type="text/javascript" src="./js/bundle.js"></script>
+</body>
+</html>
