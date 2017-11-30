@@ -48,6 +48,23 @@ $(function (){
   });
 
 
+  if ($('.slider').length) {
+    var slider = $('.slider').unslider({ 
+      nav: true,
+      autoplay: false, 
+      arrows: false,
+      speed: 1000
+        
+    });
+
+    slider.on('unslider.change', function(event, index, slide) {
+      var target = $('.slider__item.unslider-active').data('target');
+      console.log(target);
+      $('.slider-desc__item').removeClass('slider-desc__item--active');
+      $('.slider-desc__item[data-id="'+target+'"]').addClass('slider-desc__item--active');
+    });
+  }
+
   if ($('.baron').length) {
     baron({
         root: '.baron',
