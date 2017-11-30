@@ -19,6 +19,14 @@ $(function (){
     return false;
   });
 
+  $('html').click(function() {
+    $('.search--active').removeClass('search--active');
+  });
+
+  $('.search').click(function(e){
+    return false;
+  });
+  
   $('.accordeon__preview').click(function(e){
     $(this).closest('.accordeon').toggleClass('accordeon--active');
   });
