@@ -77,17 +77,29 @@ $(function (){
   if ($('.main__clipper').length) {
     
     baron({
-        root: '.main__clipper',
-        scroller: '.main__scroller',
-        bar: '.main__bar',
+        root: '.clipper-1',
+        scroller: '.scroller-1',
+        bar: '.bar-1',
+        scrollingCls: '_scrolling',
+        draggingCls: '_dragging',
+        direction: 'h'
+    });
+
+    baron({
+        root: '.clipper-2',
+        scroller: '.scroller-2',
+        bar: '.bar-2',
         scrollingCls: '_scrolling',
         draggingCls: '_dragging',
         direction: 'h'
     });
 
 
-    var height = $('.main__clipper').height();
-    $('.main__clipper').css('max-height',height-25);
+
+
+    
+    $('.clipper-1').css('max-height',$('.clipper-1').height()-25);
+    $('.clipper-2').css('max-height',$('.clipper-2').height()-25);
     /*baron({
         root: '.baron',
         scroller: '.baron__scroller',
