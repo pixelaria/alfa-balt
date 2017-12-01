@@ -51,7 +51,9 @@ p {
       background-image: none;
     }
   }
-
+  &--sm {
+    padding: 30px 0 50px 0 !important; 
+  }
   &--pixelized {
     background-image: url('../img/pixelized.png');
     background-size: cover;
@@ -3662,6 +3664,10 @@ p {
     width: 235px;
     min-width: 235px;
     margin-right: 30px;
+
+    .compare__block {
+      margin-bottom: 0;
+    }
   }
     
   &__value {
@@ -3682,7 +3688,7 @@ p {
     }
     
     &:last-child {
-      margin-bottom: 80px;
+      margin-bottom: 0;
     }
 
   }
@@ -3697,9 +3703,11 @@ p {
 
 
   &__block {
+    margin-bottom: 80px;
     &:last-child {
-      margin-bottom: 30px;
+      margin-bottom: 50px;
     }
+
   }
 
   &__item {
@@ -3729,7 +3737,7 @@ p {
   &__product {
     width: 235px;
     min-width: 235px;
-    margin-right: 20px;
+    margin-right: 30px;
   }
 }
 
