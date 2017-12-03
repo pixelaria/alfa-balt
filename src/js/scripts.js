@@ -71,6 +71,15 @@ $(function (){
       $('.slider-desc__item').removeClass('slider-desc__item--active');
       $('.slider-desc__item[data-id="'+target+'"]').addClass('slider-desc__item--active');
     });
+
+    $('.slider-nav__item').click(function(e){
+      console.log('.slider-nav__item');
+      $('.slider-nav__item').removeClass('slider-nav__item--active');
+      $(this).addClass('slider-nav__item--active');
+      var target=$(this).data('target');
+      console.log(target);
+      slider.unslider('animate:'+target);
+    });
   }
 
   

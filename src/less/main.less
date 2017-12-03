@@ -22,6 +22,13 @@ p {
   margin-bottom: 0;
 }
 
+.hr {
+  height: 1px;
+  background-color: #cecece;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
 /* GRID */
 
 
@@ -38,6 +45,14 @@ p {
     background-position: bottom center;
     background-repeat: no-repeat;
   }
+  
+
+  &--city {
+    background-image: url('../img/city.png');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
 
   &--corner {
     padding-top: 30px;
@@ -50,6 +65,20 @@ p {
     @media @mobile-xs {
       background-image: none;
     }
+  }
+
+  &--corners-1 {
+    background-image: url('../img/section-corners-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;     
+  }
+
+  &--corners-2 {
+    background-image: url('../img/section-corners-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;     
   }
   &--sm {
     padding: 30px 0 50px 0 !important; 
@@ -123,6 +152,14 @@ p {
 
     &--white {
       color:#ffffff;
+    }
+
+    span {
+      
+
+      @media @mobiles {
+        display: none;  
+      }
     }
   }
 
@@ -846,24 +883,33 @@ p {
   position: relative;
   padding: 0;
   margin: 0;
+  min-height: 70px;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: stretch;
-  
+  margin-bottom: 30px;
   padding-left:100px;
+  
 
   &:before {
     content: '';
     position: absolute;
     width: 70px;
     height: 70px;
-    background-image: url('../img/category-list.png');
     left: 0;
-    top:15px;
+    top:0;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  }
+
+  &--power:before {
+    background-image: url('../img/category-list-power.png');
+  }
+  &--engine:before {
+    background-image: url('../img/category-list-engine.png');
+  }
+  &--truck:before {
+    background-image: url('../img/category-list-truck.png');
   }
 
   @media @mobile-xs {
@@ -873,29 +919,67 @@ p {
       content: none;
     }
   }
-  &__item {
-    width: 25%;
-    font-size: 16px;
-    line-height: 44px;
+
+  &__title {
+    color: #4d4d4d;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-bottom: 18px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     
-    @media @tablet {
-      width: 33%;
+    align-items: center;
+    align-content: stretch;
+
+    &--between {
+      justify-content: space-between;  
     }
 
-    
-    
-    @media @mobile-xs {
-      width: 100% !important; 
+    &--flex-start {
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    display: inline-flex;
+    font-size: 16px;
+    margin-bottom: 15px;
+    min-width: 95px;
+
+    &--auto {
+      min-width: auto;
+      margin-right: 30px;
     }
 
     @media @mobiles {
-      width: 50%;
+      min-width: 75px;
     }
+  }
+
+  &__img {
+    display: block;
+    left: 0;
+    right: 0;
+    margin: auto;
     
   }
 
   &__link {
     color: #4d4d4d;
+//    display: block;
+    
+    &--img {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90px;
+
+      text-align: center;
+    }
 
     &:hover {
       color: #e65b35;
@@ -1036,6 +1120,44 @@ p {
       background-repeat: no-repeat;
     }    
   }
+
+  &--bigicon {
+    margin-left: 65px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 15px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -65px;
+
+      top:0;
+      bottom:0;
+      margin: auto;
+        
+      width: 50px;
+      height: 50px;
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }    
+  }
+  
+  &--presentation {
+    &:before {
+      background-image: url('../img/link-presentation.png');
+    }
+  }
+
+  &--video {
+    &:before {
+      background-image: url('../img/link-video.png');
+    }
+  }
+
 
   &--file {
     &:before {
@@ -1380,6 +1502,30 @@ p {
         opacity: 1;
         transition: all 0.3s ease;
       }
+    }
+  }
+}
+
+.single-tab {
+  border-radius: 16px;
+  overflow: hidden;
+  &__title {
+    background-color: #ed7144;
+    height: 90px;
+
+    padding: 25px 50px;
+
+    @media @mobiles {
+      text-align: center;
+    }
+  }
+
+  &__body {
+    background-color: #ffffff;
+    padding: 60px;
+
+    @media @mobiles {
+      padding: 15px;
     }
   }
 }
@@ -1817,6 +1963,7 @@ p {
   align-items: stretch;
   align-content: stretch;
 
+  margin-top: 60px;
   @media @mobiles {
     flex-direction: column;
     align-items: center;
@@ -1863,7 +2010,7 @@ p {
     text-decoration: none;
     text-align: center;
 
-    border-bottom: 1px solid;
+    //  border-bottom: 1px solid;
 
     display: inline-block;
 
@@ -1883,6 +2030,35 @@ p {
 
 
 /* ADVANTAGES */
+
+.sertificate {
+  display: flex;
+
+  
+  &__img {
+    width:215px;
+    margin-right: 25px;
+  }
+
+  &__desc {
+    position: relative;
+    max-width: 240px;
+  }
+
+  &__text {
+    color: #4d4d4d;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  
+  &__link {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+  }
+}
+
 
 .advantages {
   display: flex;
@@ -3098,7 +3274,31 @@ p {
   }
 }
 
+.slider-nav {
+  padding: 0;
+  margin:0;
+  margin-bottom: 15px;
+  list-style: none;
 
+  &__item {
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 10px;
+    background-color: #cecece;
+
+    text-align: center;
+    line-height: 30px;
+    color:#ffffff;
+    
+    cursor: pointer;
+    &:hover,&--active {
+      background-color: #ed7144;
+    }
+  }
+}
 
 
 
@@ -3237,7 +3437,7 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
 }
@@ -3326,6 +3526,9 @@ p {
     margin-bottom: 70px;
     border-bottom: 1px solid #969696;
 
+    
+    padding-bottom: 15px;
+
     @media @tablet {
       justify-content: space-around;
     }
@@ -3333,6 +3536,7 @@ p {
     @media @mobiles {
       margin-bottom: 30px;
       display: block;
+      padding-bottom: 0;
     }
   }
 
