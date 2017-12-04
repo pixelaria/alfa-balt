@@ -251,7 +251,7 @@ p {
   @media @desktop-xl {
     .container {
       width: 100%;
-      max-width: 1280px;
+      max-width: 1200px;
     }   
   }
   
@@ -345,7 +345,7 @@ p {
 
     @media @desktop-xl {
       width: 100%;
-      max-width: 1280px;
+      max-width: 1200px;
     }
     
     @media @mobiles {
@@ -364,10 +364,11 @@ p {
     &--logo {
       padding-left: 150px;
       position: relative;
-      height: 75px;
+      height: 74px;
       color:#4d4d4d;
       text-decoration: none;
       font-size: 16px;
+      font-style: italic;
       line-height: 22px;
       padding-top: 18px;
 
@@ -978,9 +979,19 @@ p {
 
       text-align: center;
     }
-
+    
+    span {
+      margin-left: 5px;
+    }
   }
-
+  
+  &--4 {
+    .category-list__item {
+      @media @desktop-xl {
+          width: 20%;
+      }
+    }
+  }
   &__img {
     display: block;
     left: 0;
@@ -1191,14 +1202,18 @@ p {
 
   &--download {
     display: inline-block;
-    background-image: url('../img/download.png');
+    background-image: url('../img/down-arrow.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     width: 30px;
     height: 30px;
 
     border:none;
-
+    
+    &:hover {
+      background-image: url('../img/down-arrow-click.png');
+    }
     @media @mobiles {
       display: none;
     }
@@ -1984,7 +1999,7 @@ p {
   align-items: stretch;
   align-content: stretch;
 
-  margin-top: 60px;
+  
   @media @mobiles {
     flex-direction: column;
     align-items: center;
@@ -2031,11 +2046,11 @@ p {
     text-decoration: none;
     text-align: center;
 
-    //  border-bottom: 1px solid;
+    
 
     display: inline-block;
 
-    transition: border-color 0.3s ease;
+    transition: color 0.3s ease;
     @media @mobiles {
       font-weight: 400;
     }
@@ -2043,7 +2058,7 @@ p {
 
   &:hover {
     .type__title {
-      border-color:transparent;
+      color:#e65b35;
     }
   }
 }
@@ -2930,6 +2945,11 @@ p {
       font-weight: 700;
       text-align: center;
 
+      text-decoration: none;
+
+      &:hover {
+        color:#ed7144;
+      }
       @media @mobiles {
         margin-bottom: 0;
       }
@@ -3016,7 +3036,8 @@ p {
   &__img {
     margin-right: 15px;
     cursor: pointer;
-
+    
+    min-width: 60px;
 
     &:hover+.product-row__desc {
       .product-row__name {
@@ -3656,6 +3677,11 @@ p {
   }
 }
 
+.noUi-target {
+  height: 10px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
 
 
 /* PROJECT */
