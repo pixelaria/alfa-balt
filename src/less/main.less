@@ -3203,6 +3203,15 @@ p {
       }
     }
   }
+
+
+  &--main {
+    position: relative;
+    border-radius: 16px;
+    background-color: #ffffff;
+
+    padding: 50px;
+  }
 }
 
 .unslider {
@@ -3298,9 +3307,66 @@ p {
       background-color: #ed7144;
     }
   }
+
+  &--main {
+    border-radius: 4px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin:auto;
+
+    width: 300px !important; 
+    .slider-nav__item {
+      width: 100px !important;
+      height: 55px;
+      border-radius: 0;
+      border: 1px solid #b9b9b9;
+      background-color: #ffffff;
+    }
+  }
 }
 
+.big-slide {
+  position: relative;
+    
+  border: 1px solid #b9b9b9;
+  border-radius: 16px;
+  
+  background-color: #ffffff;
+  
+  padding: 60px;
+  
+  display: flex;
+  flex-direction:row;
 
+  &__img {
+      
+  }
+  &__desc {
+
+  }
+  &__title {
+    color: #2d3e50;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    color: #2d3e50;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+  }
+}
 
 /* accordeon */
 
