@@ -2,13 +2,12 @@ $(function (){
   console.log('init');
 
 
-  $("#noUiSlider").noUiSlider({
-      range: [20, 1000],
-      start: [100, 500],
-      handles: 2
-  });
+  
 
- 
+  
+
+
+
 
   $('.nav__toggler').click(function(e){
     var target = $(this).data('target');
@@ -132,5 +131,75 @@ $(function (){
     $(".scroller-2").scroll(function() {
       $(".scroller-1").scrollLeft($(".scroller-2").scrollLeft());
     });
+  }
+
+
+  if ($('#price-slider').length) {
+    var min = $('#min-price'); 
+    var max = $('#max-price'); 
+    var minVal = 0; 
+    var maxVal = 3000; 
+    var start = 400;
+    var end = 1500;
+    var step = 1; 
+    
+    var slider = $("#price-slider").noUiSlider({
+      start: [0, 1000],
+      range: {
+        'min': minVal,
+        'max': maxVal
+      },
+
+      connect: true,
+      step: step,
+    });
+
+    /*slider.noUiSlider_pips({
+      mode: 'range',
+      density: 4
+    });*/
+
+    
+    setTimeout(function(){
+      slider.Link('lower').to(min);
+      slider.Link('upper').to(max);
+    },400);
+
+
+
+
+
+    /*slider.on('update', function( values, handle ) {
+      console.log(values);
+
+      var value = Math.floor(values[handle]);
+
+      if ( handle ) {
+        max.val() = value; 
+      } else {
+        min.val() = value; 
+      }
+
+      $('.noUi-value-large').text(minVal);
+      $('.noUi-value-large:last-child').text(maxVal);
+
+      if ( min.val() <= minVal || min.val() > maxVal ){
+        min.val('');
+      }
+      
+      if ( max.val() <= minVal || max.val() > maxVal ){
+        max.val('');
+      }
+    });
+
+    min.change(function(e){
+      var val = $(this).val();
+      slider.noUiSlider.set([val, null]);
+    });
+
+    max.change(function(e){
+      var val = $(this).val();
+      slider.noUiSlider.set([null, val]);
+    });*/
   }
 });
