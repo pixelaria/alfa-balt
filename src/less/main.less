@@ -131,6 +131,9 @@ p {
     background-repeat: no-repeat; 
   }
 
+  &--gradient {
+     background-image: linear-gradient(to top, #292929, #4d4d4d);
+  }
 
   &--tech {
     @media @desktop-xl {
@@ -1040,7 +1043,7 @@ p {
   font-weight: 400;  
   line-height: 50px;
   
-  border-radius: 8px;
+  border-radius: 16px;
   text-decoration: none;
 
   cursor: pointer;
@@ -1061,6 +1064,18 @@ p {
     color: #4d4d4d;
     border: 1px solid #4d4d4d;
     
+    transition: all 0.3s ease;
+
+    &:hover {
+      color:#e9421c;
+      border: 1px solid #e9421c;
+    }
+  }
+
+  &--tr-white {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: transparent;
     transition: all 0.3s ease;
 
     &:hover {
@@ -1099,6 +1114,10 @@ p {
     font-size: 0;
 
    
+  }
+
+  &--right {
+    float:right;
   }
 }
 
@@ -1363,6 +1382,18 @@ p {
     color: #e9421c;
     text-decoration: underline;
   }
+
+  &--white {
+    .breadcrumbs__item {
+      color:#ffffff;
+    }
+    .breadcrumbs__link {
+      color:#ffffff;
+      &:hover {
+        color: #e9421c;
+      }
+    }
+  }
 }
 
 .search {
@@ -1495,6 +1526,14 @@ p {
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
+    
+    @media @tablet {
+      margin-bottom: 20px;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   
   &__image {
@@ -1519,12 +1558,13 @@ p {
     &--active {
       opacity: 1;
     }
-
+    
+    @media @tablet {
+      top:35px;
+    }
     @media @mobiles {
       position: relative;
-      visibility: hidden;
-      opacity: 0;
-      max-height: 0;
+      display: none;
       
       padding: 0 15px;
 
@@ -1532,8 +1572,8 @@ p {
 
       &--active {
         visibility: visible;
-        height: auto;
-        max-height: 1000px;
+        display: block;
+        
         padding: 15px 15px;
         opacity: 1;
         transition: all 0.3s ease;
@@ -1566,6 +1606,31 @@ p {
   }
 }
 
+
+.pagination {
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 30px;
+
+  &__item {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    &:hover,&--active {
+      .pagination__link {
+        color:#ed7144;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    color:#959595;
+
+    text-decoration: none;
+  }
+}
 .radioblock {
   &__item {
     position: relative;
@@ -2421,6 +2486,12 @@ p {
     align-content: stretch;
 
   }
+
+  &--white {
+    .form__title {
+      color:#ffffff;
+    }
+  }
 }
 
 
@@ -2446,7 +2517,7 @@ p {
     line-height: 50px;
     
     padding: 0 15px;
-    border-radius: 8px;
+    border-radius: 16px;
     border: 1px solid transparent;
     background-color: #f8f8f8;
     
@@ -2729,6 +2800,7 @@ p {
   }
 
   &__range {
+    margin-top: 60px;
     margin-bottom: 35px;
   }
 }
@@ -2860,6 +2932,51 @@ p {
 
   @media @mobiles {
     margin-bottom: 15px;
+  }
+}
+
+.sort {
+  &--tabs {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    list-style: none;
+    margin-bottom: 40px;
+
+  }
+  &--links {
+     margin: 0;
+    padding: 0;
+
+    display: flex;
+    list-style: none;
+    margin-bottom: 40px;    
+  }
+
+  &__tab {
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 16px;
+    background-color: #f8f8f8;
+    
+    width: 235px;
+    text-align: center;
+    
+    cursor: pointer;
+    &:hover,&--active {
+      background-color: #ed7144;
+      color:#ffffff;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    
+
+    
   }
 }
 
@@ -3710,6 +3827,19 @@ p {
   box-shadow: none;
 }
 
+.noUi-pips-horizontal {
+  top:-35px;
+  
+}
+.noUi-value-horizontal {
+  padding-top: 0;
+  color: #4d4d4d;
+  font-size: 12px;
+  font-weight: 400;
+}
+.noUi-marker {
+  background-color: transparent;
+}
 
 /* PROJECT */
 .projects {
@@ -3719,6 +3849,14 @@ p {
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
+
+  &--mb {
+    margin-bottom: 30px;
+
+    .projects__item {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 
@@ -3743,7 +3881,7 @@ p {
     font-weight: 400;
     line-height: 28px;
 
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   &__customer {

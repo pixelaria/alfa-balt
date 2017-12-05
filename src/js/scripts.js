@@ -3,12 +3,6 @@ $(function (){
 
 
   
-
-  
-
-
-
-
   $('.nav__toggler').click(function(e){
     var target = $(this).data('target');
     $(this).toggleClass('navbar-toggler--active');
@@ -154,52 +148,30 @@ $(function (){
       step: step,
     });
 
-    /*slider.noUiSlider_pips({
-      mode: 'range',
-      density: 4
-    });*/
+
+
+    function updatePips( value, type ){
+
+        switch(true)   {
+            case (value > 300):
+             //   value = "More"
+                break;       
+        }
+        return value;
+    }
+
+    slider.noUiSlider_pips({
+      mode: 'values',
+      density: 5,
+      values: [0,600,1200,1800,2400,3000,],
+      stepped: true,
+        
+    });
 
     
     setTimeout(function(){
       slider.Link('lower').to(min);
       slider.Link('upper').to(max);
     },400);
-
-
-
-
-
-    /*slider.on('update', function( values, handle ) {
-      console.log(values);
-
-      var value = Math.floor(values[handle]);
-
-      if ( handle ) {
-        max.val() = value; 
-      } else {
-        min.val() = value; 
-      }
-
-      $('.noUi-value-large').text(minVal);
-      $('.noUi-value-large:last-child').text(maxVal);
-
-      if ( min.val() <= minVal || min.val() > maxVal ){
-        min.val('');
-      }
-      
-      if ( max.val() <= minVal || max.val() > maxVal ){
-        max.val('');
-      }
-    });
-
-    min.change(function(e){
-      var val = $(this).val();
-      slider.noUiSlider.set([val, null]);
-    });
-
-    max.change(function(e){
-      var val = $(this).val();
-      slider.noUiSlider.set([null, val]);
-    });*/
   }
 });
