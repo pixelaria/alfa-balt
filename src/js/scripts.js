@@ -61,7 +61,7 @@ $(function (){
   });
 
 
-  if ($('.slider__list').length) {
+  if ($('.slider--images').length) {
     $('.slider--images .slider__list').slick({
       arrows:false,
       dots:true,
@@ -69,39 +69,52 @@ $(function (){
 
 
     });
+  }
+  if ($('.slider--projects').length) {
+    $('.slider--projects .projects').slick({
+      arrows:false,
+      
+      dotsClass: 'slider__nav slider__nav--dark',
+      slidesToShow: 3,
+      responsive: [
+        
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2, slidesToScroll: 1,dots:false,arrows:true,
+            prevArrow: '<span class="slider__arrow slider__arrow--big slider__arrow--prev"></span>',
+            nextArrow: '<span class="slider__arrow slider__arrow--big slider__arrow--next"></span>',
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {slidesToShow: 1, slidesToScroll: 1,dots:true,}
+        },
 
+      ]
+    });
+  }
+
+  if ($('.slider--clients').length) {
     $('.slider--clients .slider__list').slick({
       infinite: true,
       slidesToShow: 6,
       slidesToScroll: 1,
-      prevArrow: '<a href="#" class="slider__arrow slider__arrow--prev"></a>',
-      nextArrow: '<a href="#" class="slider__arrow slider__arrow--next"></a>',
-    });
-    /*var slider = $('.slider').unslider({ 
-      nav: true,
-      autoplay: true, 
-      arrows: false,
-      speed: 1000,
-      visible:3
-        
-    });
+      
+      prevArrow: '<span class="slider__arrow slider__arrow--prev"></span>',
+      nextArrow: '<span class="slider__arrow slider__arrow--next"></span>',
 
-    slider.on('unslider.change', function(event, index, slide) {
-      var target = $('.slider__item.unslider-active').data('target');
-      console.log(target);
-      $('.slider-desc__item').removeClass('slider-desc__item--active');
-      $('.slider-desc__item[data-id="'+target+'"]').addClass('slider-desc__item--active');
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {slidesToShow: 1,slidesToScroll: 1,infinite: true,}
+        },
+        {
+          breakpoint: 480,
+          settings: {slidesToShow: 1,slidesToScroll: 1}
+        }
+      ]
     });
-
-    $('.slider-nav__item').click(function(e){
-      console.log('.slider-nav__item');
-      $('.slider-nav__item').removeClass('slider-nav__item--active');
-      $(this).addClass('slider-nav__item--active');
-      var target=$(this).data('target');
-      console.log(target);
-      slider.unslider('animate:'+target);
-    });*/
-
   }
 
 

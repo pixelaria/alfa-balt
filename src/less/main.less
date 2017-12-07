@@ -27,6 +27,10 @@ p {
   background-color: #cecece;
   margin-top: -15px;
   margin-bottom: 15px;
+
+  @media @mobiles {
+    display: none;
+  }
 }
 
 /* GRID */
@@ -2219,27 +2223,58 @@ p {
   display: flex;
 
   
+
   &__img {
     width:215px;
     margin-right: 25px;
+
+    img {
+      max-width: 215px;
+    }
   }
 
   &__desc {
     position: relative;
     max-width: 240px;
   }
-
+  
   &__text {
     color: #4d4d4d;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
+
+    @media @mobiles {
+      margin-bottom: 30px;
+    }
   }
   
   &__link {
     position: absolute;
     right: 0;
     bottom: 20px;
+
+    @media @mobiles {
+      position: relative;
+      float:right;
+    }
+  }
+
+  @media @mobiles {
+    display: block;
+
+    &__img,&__desc {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__img {
+      text-align: center;
+      margin-bottom: 40px;
+      img {
+        display: inline-block;
+      }
+    }
   }
 }
 
@@ -3494,8 +3529,27 @@ p {
     img {
       border-radius: 16px;
     }
+
+    @media @mobiles {
+      margin-bottom: 0;
+    }
+  }
+  
+  &--clients {
+    margin-left: 35px;
+    margin-right: 35px;
   }
 
+  &--projects {
+    @media @mobiles {
+      padding-bottom: 15px;
+    }
+
+    .slick-track {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   &__image {
 
   }
@@ -3508,7 +3562,12 @@ p {
   &__item {
     overflow: hidden;
     
-    
+    display: flex !important;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
     min-height: 60px;
     
 
@@ -3554,6 +3613,20 @@ p {
         background-color: #ffffff;
       }
     }
+
+    &--dark {
+      bottom: -50px;
+
+      @media @mobiles {
+        bottom:-35px;
+      }
+      li {
+        border-color:#4d4d4d;
+        &.slick-active {
+          background-color: #4d4d4d;
+        }
+      }
+    }
   }
   &__arrow {
     display: block;
@@ -3564,13 +3637,28 @@ p {
     height: 20px;
 
     margin:auto;
+    
+    border-left: 2px solid #959595;
+    border-top: 2px solid #959595;
+    cursor: pointer;
 
+    transition: border-color 0.3s ease;
+    
+    &:hover {
+      border-color:#4d4d4d;
+    }
     &--next {
-      right: 0;
+      right: -30px;
+      transform:rotateZ(135deg);
     }
 
     &--prev {
-      left: 0;
+      left: -30px;
+      transform:rotateZ(-45deg);
+    }
+
+    &--big {
+
     }
   }
 }
@@ -3649,7 +3737,10 @@ p {
   margin:0;
   margin-bottom: 15px;
   list-style: none;
-
+  
+  @media @mobiles {
+    display: none;
+  }
   &__item {
     display: inline-block;
 
@@ -4100,7 +4191,7 @@ p {
   align-items: stretch;
   align-content: stretch;
 
-
+  
   @media @mobiles {
     margin-right: -20px;
     margin-left: -20px;
@@ -4117,6 +4208,13 @@ p {
 
 .project {
   width: 320px;
+  
+  max-width: 320px;
+
+  @media @mobiles {
+    max-width: 100%;
+  }
+  
   box-shadow: 0 2px 4px rgba(128, 128, 128, 0.3);
   border-radius: 8px;
   
@@ -4125,7 +4223,7 @@ p {
 
   @media @mobile-xs {
     width: 100%;
-    max-width: 320px;
+    
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
