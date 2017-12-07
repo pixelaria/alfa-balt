@@ -870,7 +870,11 @@ p {
   }
 
   &__item {
-
+    span {
+      font-weight: 700;
+      display: inline-block;
+      min-width: 135px;
+    }
   }
 
   &__link {
@@ -1160,8 +1164,9 @@ p {
   }
   
   &--btn {
+    display: inline-block;
     @media @mobiles {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
   }
 
@@ -1241,6 +1246,15 @@ p {
   &--file-orange {
     &:before {
       background-image: url('../img/icon-file-orange.png');
+      left: -30px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--file-white {
+    &:before {
+      background-image: url('../img/icon-file.png');
       left: -30px;
       width: 20px;
       height: 20px;
@@ -2554,6 +2568,10 @@ p {
     align-items: center;
     align-content: stretch;
 
+    @media @mobiles {
+      display: block;
+    }
+
   }
 
   &--white {
@@ -2570,14 +2588,16 @@ p {
   
   &--btn {
     display: flex;
+    margin-bottom: 0;
     .input-group__input {
       width: auto;
       margin-right: 15px;
+
     }
   }
 
   &:last-child {
-    margin-bottom: 0;
+    //margin-bottom: 0;
   }
   
   &__label {
@@ -3464,17 +3484,33 @@ p {
 
 .slider {
 
+  &--images {
+    margin-bottom: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+    .slider__item {
+      padding: 0 15px !important;
+    }
+    img {
+      border-radius: 16px;
+    }
+  }
+
   &__image {
 
+  }
+  
+  &__list {
+    padding: 0;
+    margin: 0;
   }
 
   &__item {
     overflow: hidden;
-    padding: 0 15px !important;
-
-    img {
-      border-radius: 16px;
-    }
+    
+    
+    min-height: 60px;
+    
 
     @media @mobiles {
       padding:0 !important;
@@ -3491,6 +3527,51 @@ p {
     background-color: #ffffff;
 
     padding: 50px;
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    
+    li {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 8px;
+      background: transparent;
+      border-radius: 5px;
+      overflow: hidden;
+      text-indent: -999em;
+      border: 2px solid #fff;
+      cursor: pointer;
+
+      &.slick-active {
+        background-color: #ffffff;
+      }
+    }
+  }
+  &__arrow {
+    display: block;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+
+    margin:auto;
+
+    &--next {
+      right: 0;
+    }
+
+    &--prev {
+      left: 0;
+    }
   }
 }
 
