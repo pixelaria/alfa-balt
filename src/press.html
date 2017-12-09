@@ -1,0 +1,114 @@
+@@include('_html/_head.html')
+
+@@include('_html/_header.html')
+<main>
+  <section class="section--corner">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+        <li class="breadcrumbs__item">Пресс-центр</li>
+      </ul>
+      <div class="page">
+        <h1 class="page__title">Пресс-центр</h1>
+        <div class="services">
+          <div class="services__item service">
+            <div class="service__desc">
+              <p class="service__title">Новости отрасли</p>
+              <p class="service__text">Новости от наших партнеров, а также нашумевшие события из смежных отраслей </p>
+              <a href="#" class="link link--orange service__link">Читать больше</a>
+            </div>
+            <div class="service__img">
+              <img src="./img/press-1.png" alt="" class="img img--auto">
+            </div>
+          </div>
+          <div class="services__item service">
+            <div class="service__desc">
+              <p class="service__title">События</p>
+              <p class="service__text">Пополнение ассортимента, структурные изменения, наши выставки </p>
+              <a href="#" class="link link--orange service__link">Читать больше</a>
+            </div>
+            <div class="service__img">
+              <img src="./img/press-2.png" alt="" class="img img--auto">
+            </div>
+          </div>
+          <div class="services__item aside">
+            <p class="aside__title">Статьи</p>
+            <p class="aside__text">Полезные публикации о дизельных элекстростанциях и не только</p>
+            <a href="" class="aside__link aside__link--orange">Читать больше</a>
+          </div>
+          <div class="services__item aside">
+            <p class="aside__title">F.A.Q.</p>
+            <p class="aside__text">Популярные вопросы от наших клиентов и возникающими в ходе сопровождения проектов</p>
+            <a href="" class="aside__link aside__link--orange">Читать больше</a>
+          </div>
+          <div class="services__item aside">
+            <p class="aside__title">Документы и брошюры</p>
+            <p class="aside__text">Подробная документация на наше оборудование и дополнительные системы</p>
+            <a href="" class="aside__link aside__link--orange">Читать больше</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--pixelized">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="section__text section__text--white">Информационный раздел создан для того, чтобы делиться последними новостями, а также личным опытом и соображениями по поводу развития дизель-генераторного напраления.</p>
+          <p class="section__text section__text--white">Если вы регулярно интересуетесь новинками, новыми технологиями в этой области, то подпишитесь Чтобы получать последние новости сферы и материалы экспертов области</p>
+        </div>
+        <div class="col-lg-4">
+          <div class="aside aside--tr">
+            <p class="aside__text">Подпишитесь на новости</p>
+            <div class="aside-form">
+              <div class="input-group input-group--btn">
+                <input class="input-group__input" value="" type="text">
+                <label class="input-group__label im--email" for="name">E-mail</label>
+                <a href="#" class="btn btn--orange btn--email"></a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--question">
+    <div class="container">
+      <div class="form form--callback">
+        <div class="form__info">
+          <h2 class="form__title">Остались вопросы?</h2>
+          <p class="form__subtitle form__subtitle--right">Заполните форму <br>или позвоните по телефону +7 (812) 337-68-20</p>  
+        </div>
+        <div class="form__fields row">
+          <div class="col-md-4 col-lg-6">
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label" for="name">ФИО / Компания*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input im--phone" value="" type="text">
+              <label class="input-group__label" for="name">Телефон*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label im--email" for="name">E-mail</label>               
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6">
+            <div class="input-group">
+              <textarea class="input-group__input input-group__input--text" value="" type="text"></textarea>
+              <label class="input-group__label" for="name">Ваш вопрос или предварительная заявка</label>               
+            </div>
+            <div class="form__buttons">
+              <a class="link link--btn link--icon link--file">Прикрепить файл</a>
+              <button class="btn btn--orange">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+@@include('_html/_footer.html')
