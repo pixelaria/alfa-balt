@@ -1,0 +1,103 @@
+@@include('_html/_head.html')
+
+@@include('_html/_header.html')
+
+<main>
+  <section class="section section--corner">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Пресс-центр</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Новости отрасли</a></li>
+        <li class="breadcrumbs__item">Заголовок новости</li>
+      </ul>
+      <h1 class="page__title">Заголовок новости очень длинный в две строки,<br>очень длинный заголовок</h1>
+      <div class="row">
+        <div class="col-lg-7">
+          <p class="page__date">10.12.2017</p>
+          <p class="page__subtitle page__subtitle--bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus delectus, sit perferendis consectetur molestiae architecto expedita aliquid commodi error! Adipisci ex accusamus, eos alias rerum magni accusantium nesciunt! Dolorem, consequatur.</p>    
+          <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur modi illum ullam, cupiditate repellat, voluptas rem, id aliquam beatae maxime culpa, earum dolorem aperiam! Atque est sit dolorum voluptatem suscipit!</p>
+        </div>
+        <div class="col-lg-5">
+          <img src="./img/article-5.png" alt="" class="img img--responsive">
+        </div>
+      </div>
+      
+      
+      
+      <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quidem quibusdam quas earum officia error expedita, repudiandae explicabo odio quisquam ex reprehenderit magnam ullam laborum cumque dicta, optio, quo eius.</p>
+      <p class="section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum voluptatem, aspernatur minus consectetur est eaque nostrum sint consequatur iste, magnam eos explicabo delectus ab soluta atque, commodi, iusto! Reiciendis, eveniet! Hic sunt perspiciatis earum laboriosam expedita enim, aliquam eligendi nobis quas commodi deserunt voluptatibus eius maxime iusto sed aperiam sequi. Sint adipisci eligendi, ipsum excepturi repellat eveniet ducimus voluptates sed.</p>
+
+      <p class="section__text">Маркированный список: </p>
+      <ul class="list list--flash">
+        <li class="list__item">Пункт в списке</li>
+        <li class="list__item">Пункт в списке</li>
+        <li class="list__item">Пункт в списке</li>
+      </ul>
+
+      <blockquote class="blockquote blockquote--gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, quasi debitis consectetur assumenda eius minima obcaecati, iusto, mollitia nisi laborum quod animi. Suscipit libero nulla, et quos, ducimus accusantium earum?</blockquote>
+    </div>
+  </section>
+  <section class="section section--pixelized">
+    <div class="container">
+      <h2 class="section__title section__title--white">Похожие новости</h2>
+      <div class="services services--sm">
+        <div class="services__item service">
+          <div class="service__img">
+            <img src="./img/article-1.png" alt="" class="img img--responsive">
+          </div>
+          <div class="service__desc">
+            <p class="service__title">Шикарная новость с заголовком на пару строк</p>
+            <p class="service__text">Текст новости также нашумевшие события из смежных отраслей…</p>
+          </div>
+        </div>
+        <div class="services__item service">
+          <div class="service__img">
+            <img src="./img/article-4.png" alt="" class="img img--responsive">
+          </div>
+          <div class="service__desc">
+            <p class="service__title">Шикарная новость с заголовком на пару строк</p>
+            <p class="service__text">Текст новости также нашумевшие события из смежных отраслей…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--question">
+    <div class="container">
+      <div class="form form--callback">
+        <div class="form__info">
+          <h2 class="form__title">Остались вопросы?</h2>
+          <p class="form__subtitle form__subtitle--right">Заполните форму <br>или позвоните по телефону +7 (812) 337-68-20</p>  
+        </div>
+        <div class="form__fields row">
+          <div class="col-md-4 col-lg-6">
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label" for="name">ФИО / Компания*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input im--phone" value="" type="text">
+              <label class="input-group__label" for="name">Телефон*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label im--email" for="name">E-mail</label>               
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6">
+            <div class="input-group">
+              <textarea class="input-group__input input-group__input--text" value="" type="text"></textarea>
+              <label class="input-group__label" for="name">Ваш вопрос или предварительная заявка</label>               
+            </div>
+            <div class="form__buttons">
+              <a class="link link--btn link--icon link--file">Прикрепить файл</a>
+              <button class="btn btn--orange">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+@@include('_html/_footer.html')

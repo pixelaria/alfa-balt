@@ -1,0 +1,87 @@
+@@include('_html/_head.html')
+
+@@include('_html/_header.html')
+
+<main>
+  <section class="section section--corner">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+        <li class="breadcrumbs__item">Поиск</li>
+      </ul>
+      <h1 class="page__title">Поиск по сайту</h1>
+      <h2 class="page__subtitle page__subtitle--big">Введите слово или фразу, чтобы найти нужную страницу. Например, «Дизельная электростанция»</h2>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="input-group">
+            <input class="input-group__input" value="" type="text">
+            <label class="input-group__label im--email" for="name">Поиск...</label>
+          </div>    
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="btn btn--orange btn--inline">Поиск</a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <section class="section section--pixelized">
+    <div class="container">
+      <h2 class="section__title section__title--white">Результаты поиска:</h2>
+      <a href="#" class="results">
+        <p class="results__title">1. Название страницы</p>
+        <p class="results__text">Короткое автоматическое описание страницы содержащее искомое <span>ключевое слово</span> один или несколько раз (весь блок - это ссылка)</p>
+      </a>
+      <a href="#" class="results">
+        <p class="results__title">2. Название страницы</p>
+        <p class="results__text">Короткое автоматическое описание страницы содержащее искомое <span>ключевое слово</span> один или несколько раз (весь блок - это ссылка)</p>
+      </a>
+      <a href="#" class="results">
+        <p class="results__title">3. Название страницы</p>
+        <p class="results__text">Короткое автоматическое описание страницы содержащее искомое <span>ключевое слово</span> один или несколько раз (весь блок - это ссылка)</p>
+      </a>
+      <a href="#" class="results">
+        <p class="results__title">4. Название страницы</p>
+        <p class="results__text">Короткое автоматическое описание страницы содержащее искомое <span>ключевое слово</span> один или несколько раз (весь блок - это ссылка)</p>
+      </a>
+    </div>
+  </section>
+  <section class="section section--question">
+    <div class="container">
+      <div class="form form--callback">
+        <div class="form__info">
+          <h2 class="form__title">Остались вопросы?</h2>
+          <p class="form__subtitle form__subtitle--right">Заполните форму <br>или позвоните по телефону +7 (812) 337-68-20</p>  
+        </div>
+        <div class="form__fields row">
+          <div class="col-md-4 col-lg-6">
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label" for="name">ФИО / Компания*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input im--phone" value="" type="text">
+              <label class="input-group__label" for="name">Телефон*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label im--email" for="name">E-mail</label>               
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6">
+            <div class="input-group">
+              <textarea class="input-group__input input-group__input--text" value="" type="text"></textarea>
+              <label class="input-group__label" for="name">Ваш вопрос или предварительная заявка</label>               
+            </div>
+            <div class="form__buttons">
+              <a class="link link--btn link--icon link--file">Прикрепить файл</a>
+              <button class="btn btn--orange">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include('_html/_footer.html')
