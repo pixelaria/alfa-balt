@@ -49,6 +49,25 @@ p {
     background-position: bottom center;
     background-repeat: no-repeat;
   }
+  &--page-2 {
+    padding-top: 30px;
+    background-image: url('../img/section-bg-page-2.png');
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+
+  &--404 {
+    padding-top: 30px;
+    padding-bottom: 200px;
+
+    background-image: url('../img/section-bg-404.png');
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+  }
+
   
 
   &--city {
@@ -138,6 +157,10 @@ p {
   &--gradient {
      background-image: linear-gradient(to top, #292929, #4d4d4d);
   }
+  
+  &--gray {
+    background-color: #F8F8F8;
+  }
 
   &--tech {
     @media @desktop-xl {
@@ -191,6 +214,11 @@ p {
 
     &--white {
       color:#ffffff;
+    }
+
+    &--center {
+      text-align: center;
+      margin-bottom: 0;
     }
   }
 
@@ -2309,7 +2337,7 @@ p {
 .sertificate {
   display: flex;
 
-  
+  margin-bottom: 30px;
 
   &__img {
     width:215px;
@@ -3637,11 +3665,19 @@ p {
     }
     .slick-track {
       display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
       justify-content: space-between;
+      align-items: center;
+      align-content: stretch;
 
       @media @tablet {
         margin-left: -15px;
         margin-right: -15px;  
+      }
+
+      &:before,&:after {
+        content:none;
       }
       
     }
@@ -5543,7 +5579,7 @@ p {
   text-align: center;
   color: #959595;
   position: absolute;
-  right: 0;
+  right: 100px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -5588,5 +5624,58 @@ p {
 
   @media @mobiles {
     margin-bottom: 20px;
+  }
+}
+
+
+
+.squares {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+
+  margin-top: 50px;
+
+  @media @mobiles {
+    display: block;
+  }
+
+  &__item {
+    width:220px;
+
+    @media @tablet {
+      margin-bottom: 40px;
+    }
+
+    @media @mobiles {
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      margin-bottom: 40px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+}
+
+
+.square {
+  &__title {
+    text-align: center;
+    color: #2d3e50;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  &__img {
+    margin-bottom: 30px;
   }
 }
