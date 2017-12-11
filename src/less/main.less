@@ -1097,7 +1097,7 @@ p {
   }
 
   &__item {
-    display: inline-flex;
+    
     font-size: 16px;
     margin-bottom: 15px;
     min-width: 95px;
@@ -1243,7 +1243,8 @@ p {
     background-repeat: no-repeat;
 
     font-size: 0;
-
+    
+    border-radius: 8px;
    
   }
   &--inline {
@@ -1371,7 +1372,7 @@ p {
 
   &--file-white {
     &:before {
-      background-image: url('../img/icon-file.png');
+      background-image: url('../img/icon-file-white.png');
       left: -30px;
       width: 20px;
       height: 20px;
@@ -2053,7 +2054,7 @@ p {
     line-height: 28px;
     color: #4d4d4d;
     text-decoration: none;
-    &:hover {
+    &--active,&:hover {
       color: #ed7144;
     }
 
@@ -4416,7 +4417,7 @@ p {
 
 .project {
   min-width: 280px;
-  
+  margin-bottom: 5px;
   max-width: 320px;
   
   @media @mobiles {
@@ -4426,7 +4427,7 @@ p {
   box-shadow: 0 2px 4px rgba(128, 128, 128, 0.3);
   border-radius: 8px;
   
-  overflow: hidden;
+  
   
 
   @media @desktop {
@@ -4444,7 +4445,7 @@ p {
   &__desc {
     position: relative;
     background-color: #f8f8f8;
-    padding:30px 25px 25px 25px;  
+    padding:30px 25px 30px 25px;  
   }
 
   &__title {
@@ -4456,6 +4457,8 @@ p {
     line-height: 28px;
 
     margin-bottom: 15px;
+    transition: color 0.3s ease;
+    cursor: pointer;
   }
 
   &__customer {
@@ -4488,14 +4491,18 @@ p {
       color: #ed7144;
     }
 
-    &:first-child {
-      float: left;  
-    }
+    float: left;  
 
     &:last-child {
       float: right;  
     }
     
+  }
+
+  &:hover {
+    .project__title {
+      color:#ed7144;
+    }
   }
 }
 /* FOOTER */
@@ -5310,6 +5317,7 @@ p {
 
   &__img {
     width:200px;
+    margin-right: 20px;
   }
 
 
@@ -5399,6 +5407,10 @@ p {
     line-height: 28px;
     color: #4d4d4d;
     margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   
 
@@ -5543,7 +5555,17 @@ p {
   box-shadow: 0 2px 4px 0 rgba(128, 128, 128, 0.3);
   
   padding: 35px;
+  
+  cursor:pointer;
+  
+  text-decoration: none;
+  color:#4d4d4d;
 
+  &:hover {
+    .industry__title {
+      color:#ED7144;
+    }
+  }
   &__desc {
     position: relative;
     padding-right:200px;
@@ -5559,6 +5581,8 @@ p {
     font-size: 24px;
     line-height: 32px;
     margin-bottom: 20px;
+
+    transition: color 0.3s ease;
 
   }
 

@@ -66,6 +66,8 @@ $(function (){
       arrows:false,
       dots:true,
       dotsClass: 'slider__nav',
+      autoplay: true,
+      autoplaySpeed: 5000
 
 
     });
@@ -76,6 +78,8 @@ $(function (){
       
       dotsClass: 'slider__nav slider__nav--dark',
       slidesToShow: 3,
+      autoplay: true,
+      autoplaySpeed: 5000,
       responsive: [
         
         {
@@ -100,6 +104,8 @@ $(function (){
       infinite: true,
       slidesToShow: 6,
       slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
       
       prevArrow: '<span class="slider__arrow slider__arrow--prev"></span>',
       nextArrow: '<span class="slider__arrow slider__arrow--next"></span>',
