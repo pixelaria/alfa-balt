@@ -66,6 +66,10 @@ p {
     background-position: bottom center;
     background-repeat: no-repeat;
 
+    @media @mobiles {
+      background-image: none;
+    }
+
   }
 
   
@@ -185,6 +189,17 @@ p {
       }
     }
   }
+  
+  &__img {
+    margin-bottom: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    @media @mobiles {
+      margin-left:-20px;
+      margin-right:-20px;
+    }
+  }
 
   &__title {
     font-size: 24px;
@@ -224,6 +239,28 @@ p {
 
   @media @mobiles {
     padding: 50px 0;
+  }
+
+  &__images {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    
+    .section__img  {
+      width: 32%;
+    }
+
+    @media @mobiles {
+      display: block;
+      
+      .section__img {
+        width: auto;
+      }
+    }
   }
 }
 
@@ -1359,7 +1396,24 @@ p {
     } 
   }
 
+  
+  &--clock-orange {
+    &:before {
+      background-image: url('../img/icon-clock-orange.png');
+      left: -30px;
+      width: 20px;
+      height: 20px;
+    } 
+  }
 
+  &--factory-orange {
+    &:before {
+      background-image: url('../img/icon-factory-orange.png');
+      left: -30px;
+      width: 20px;
+      height: 20px;
+    } 
+  }
 
   &--download {
     display: inline-block;
@@ -1905,6 +1959,10 @@ p {
   
   @media @desktop-xl {
     max-width: 320px;
+
+    &--fw {
+      max-width: 100%;
+    }
   }
   
   @media @mobile-xs {
@@ -3638,6 +3696,7 @@ p {
     margin-bottom: 30px;
     margin-left: -15px;
     margin-right: -15px;
+
     .slider__item {
       padding: 0 15px !important;
     }
@@ -3646,7 +3705,11 @@ p {
     }
 
     @media @mobiles {
-      margin-bottom: 0;
+      margin-left: -20px;
+      margin-right: -20px;
+      .slider__item {
+        padding: 0 !important;
+      }
     }
   }
   
@@ -5380,7 +5443,7 @@ p {
   }
 
   &--factory {
-    &:before { background-image: url('../img/icon-email-orange.png');}
+    &:before { background-image: url('../img/icon-factory-orange.png');}
   }
   &--clear {}
   &--phone {
@@ -5389,7 +5452,9 @@ p {
   &--email {
     &:before { background-image: url('../img/icon-email-orange.png');}
   }
-  &--doc {}
+  &--doc {
+    &:before { background-image: url('../img/icon-doc-orange.png');}
+  }
 
   &__title {
     font-size: 16px;
@@ -5579,9 +5644,8 @@ p {
   text-align: center;
   color: #959595;
   position: absolute;
-  right: 100px;
+  right: 0;
   top: 0;
-  bottom: 0;
   margin: auto;
 
   @media @mobiles {
