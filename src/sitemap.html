@@ -1,0 +1,62 @@
+@@include('_html/_head.html')
+
+@@include('_html/_header.html')
+
+<main>
+  <section class="section section--corner">
+    <div class="container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+        <li class="breadcrumbs__item">Карта сайта</li>
+      </ul>
+      <h1 class="page__title">Карта сайта</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="sitemap">
+            
+          </div>
+
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section--question">
+    <div class="container">
+      <div class="form form--callback">
+        <div class="form__info">
+          <h2 class="form__title">Остались вопросы?</h2>
+          <p class="form__subtitle form__subtitle--right">Заполните форму <br>или позвоните по телефону +7 (812) 337-68-20</p>  
+        </div>
+        <div class="form__fields row">
+          <div class="col-md-4 col-lg-6">
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label" for="name">ФИО / Компания*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input im--phone" value="" type="text">
+              <label class="input-group__label" for="name">Телефон*</label>               
+            </div>
+            <div class="input-group">
+              <input class="input-group__input" value="" type="text">
+              <label class="input-group__label im--email" for="name">E-mail</label>               
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6">
+            <div class="input-group">
+              <textarea class="input-group__input input-group__input--text" value="" type="text"></textarea>
+              <label class="input-group__label" for="name">Ваш вопрос или предварительная заявка</label>               
+            </div>
+            <div class="form__buttons">
+              <a class="link link--btn link--icon link--file">Прикрепить файл</a>
+              <button class="btn btn--orange">Отправить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include('_html/_footer.html')
