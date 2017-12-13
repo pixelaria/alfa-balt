@@ -12,12 +12,70 @@
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">ДЭС в контейнере</a></li>
         <li class="breadcrumbs__item">Дизель-генератор АБИН XXX-XXX</li>
       </ul>
-      <div class="page row">
-        <div class="col-lg-6"></div>
-        <div class="col-lg-6">
+      <div class="product-page">
+        <div class="product-page__info">
           <h1 class="page__title product__title">ДЭС АБИН (ЯМЗ) <br> XXX-XX-XX</h1>
+          <p class="product__category">Альфа Балт Инжиниринг <span>(Россия)</span></p>
+        </div>
+        <div class="product-page__img">
+          <div class="row">
+            <div class="product__image col-md-9 col-lg-12">
+              <img src="./img/product-2.png" alt="" class="img img--responsive">
+            </div>  
+            <div class="product__images col-md-3 col-lg-12">
+              <div class="product__image product__image--sm">
+                <img src="./img/product-2.png" alt="" class="img img--responsive">
+              </div>
+              <div class="product__image product__image--sm">
+                <img src="./img/product-2.png" alt="" class="img img--responsive">
+              </div>
+              <div class="product__image product__image--sm">
+                <img src="./img/product-2.png" alt="" class="img img--responsive">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="product-page__desc">
+          <div class="product__params">
+            <div class="product__param product-param product-param--flash-orange">
+              <div class="product-param__title">Основная мощность (?):</div>
+              <div class="product-param__value">10 кВт / 15 кВА</div>
+            </div>
+            <div class="product__param product-param product-param--engine">
+              <div class="product-param__title">Двигатель (?):</div>
+              <div class="product-param__value">Iveco MX-100</div>
+            </div>
+            <div class="product__param product-param product-param--electro">
+              <div class="product-param__title">Напряжение (?):</div>
+              <div class="product-param__value">380 В</div>
+            </div>
+            <div class="product__param product-param product-param--flash-orange">
+              <div class="product-param__title">Резервная мощность (?):</div>
+              <div class="product-param__value">10 кВт / 15 кВА</div>
+            </div>
+            <div class="product__param product-param product-param--battery">
+              <div class="product-param__title">Генератор (?):</div>
+              <div class="product-param__value">Leroy Somer</div>
+            </div>
+          </div>
+          <div class="product__types product-types">
+            <div class="product-types__title">Вариант исполнения:</div>
+            <ul class="product-types__list">
+              <li class="product-types__type product-types__type--active">Кожух</li>
+              <li class="product-types__type">Контейнер</li>
+              <li class="product-types__type">Шасси</li>
+            </ul>
+          </div>
+
+          <div class="product__links">
+            <a href="#" class="link link--btn">Заказать облуживание и ЗИП</a>
+            <a href="#" class="btn btn--orange">Запросить цену</a>
+          </div>
         </div>
       </div>
+
+
     </div>
   </section>
   <div class="section section--gray section--sm-2">
@@ -27,7 +85,7 @@
         <li class="list__item"><a href="#" class="link">Лизинг</a></li>
         <li class="list__item"><a href="#" class="link">Аренда</a></li>
         <li class="list__item"><a href="#" class="link">Гарантии</a></li>
-        <li class="list__item"><a href="#" class="link">Сертификаты</a></li>
+        <li class="list__i  tem"><a href="#" class="link">Сертификаты</a></li>
       </ul>
     </div>
   </div>
@@ -38,7 +96,7 @@
           <p class="section__text">Дизельная электростанция модели АБИН(ЯМЗ)XXX-XX-XX — высококлассный силовой агрегат на базе отечественного двигателя ЯМЗ XXX-XX и генератора переменного тока (альтернатора) Marelli XXXXXXX, обеспечивающий нагрузку до 100 кВт (120 кВА) в номинальном режиме и 150 кВт (200 кВА) в аварийном режиме работы.</p>
           <p class="section__text">Дизель-генератор АБИН(ЯМЗ)XXX-XX-XX предназначен для выработки трехфазного электрического тока напряжением 380 В объектах строительства, промышленности и резервирования сети на муниципальных учреждениях, в том числе участков и систем с высокой степенью ответственности.</p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4 section__links">
           <a href="#" class="btn btn--inline btn--gray">Скачать спецификацию</a>
           <a href="#" class="btn btn--inline btn--tr">Опросный лист</a>
         </div>
@@ -79,41 +137,46 @@
   <section class="section section--corners-1">
     <div class="container">
       <h2 class="section__title">Реализованные проекты на этом оборудовании</h2>
-      <div class="projects">
-        <div class="projects__item project">
-          <div class="project__image">
-            <img src="./img/project.png" alt="" class="img img--responsive">
+      <div class="slider slider--projects">
+        <div class="projects" style="display:block">
+          <div class="projects__item project">
+            <div class="project__image">
+              <img src="./img/project.png" alt="" class="img img--responsive">
+            </div>
+            <div class="project__desc">
+              <div class="project__customer"><span>Заказчик: </span> РосТурбинСтрой</div>
+              <div class="project__icon"><img src="./img/project-icon.png" alt="" class="img img--responsive"></div>
+              <p class="project__title">Организация временного энергоснабжения для 7-х зимних азиатских игр "Азиада-2011"</p>
+              <div class="project__info project__info--orange">Строительство</div>
+              <div class="project__info">2017 г.</div>
+
+            </div>
           </div>
-          <div class="project__desc">
-            <div class="project__customer"><span>Заказчик: </span> Ростурбинстрой</div>
-            <div class="project__icon"><img src="./img/project-icon.png" alt="" class="img img--responsive"></div>
-            <p class="project__title">Организация временного энергоснабжения для 7-х зимних азиатских игр "Азиада-2011"</p>
-            <div class="project__info project__info--orange">Строительство</div>
-            <div class="project__info">2017 г.</div>
+          <div class="projects__item project">
+            <div class="project__image">
+              <img src="./img/project.png" alt="" class="img img--responsive">
+            </div>
+            <div class="project__desc">
+              <div class="project__customer"><span>Заказчик: </span> РосТурбинСтрой</div>
+              <div class="project__icon"><img src="./img/project-icon.png" alt="" class="img img--responsive"></div>
+              <p class="project__title">Организация временного энергоснабжения для 7-х зимних азиатских игр "Азиада-2011"</p>
+              <div class="project__info project__info--orange">Строительство</div>
+              <div class="project__info">2017 г.</div>
+
+            </div>
           </div>
-        </div>
-        <div class="projects__item project">
-          <div class="project__image">
-            <img src="./img/project.png" alt="" class="img img--responsive">
-          </div>
-          <div class="project__desc">
-            <div class="project__customer"><span>Заказчик: </span> Ростурбинстрой</div>
-            <div class="project__icon"><img src="./img/project-icon.png" alt="" class="img img--responsive"></div>
-            <p class="project__title">Организация временного энергоснабжения для 7-х зимних азиатских игр "Азиада-2011"</p>
-            <div class="project__info project__info--orange">Строительство</div>
-            <div class="project__info">2017 г.</div>
-          </div>
-        </div>
-        <div class="projects__item project">
-          <div class="project__image">
-            <img src="./img/project.png" alt="" class="img img--responsive">
-          </div>
-          <div class="project__desc">
-            <div class="project__customer"><span>Заказчик: </span> Ростурбинстрой</div>
-            <div class="project__icon"><img src="./img/project-icon.png" alt="" class="img img--responsive"></div>
-            <p class="project__title">Организация временного энергоснабжения для 7-х зимних азиатских игр "Азиада-2011"</p>
-            <div class="project__info project__info--orange">Строительство</div>
-            <div class="project__info">2017 г.</div>
+          <div class="projects__item project">
+            <div class="project__image">
+              <img src="./img/project.png" alt="" class="img img--responsive">
+            </div>
+            <div class="project__desc">
+              <div class="project__customer"><span>Заказчик: </span> РосТурбинСтрой</div>
+              <div class="project__icon"><img src="./img/project-icon.png" alt="" class="img img--responsive"></div>
+              <p class="project__title">Организация временного энергоснабжения для 7-х зимних азиатских игр "Азиада-2011"</p>
+              <div class="project__info project__info--orange">Строительство</div>
+              <div class="project__info">2017 г.</div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -123,47 +186,49 @@
   <section class="section">
     <div class="container">
       <h2 class="section__title">Рекомендуемые аналоги</h2>
-      <div class="related">
-        <div class="related__item">
-          <div class="related__img">
-            <img src="./img/related-1.png" alt="" class="img img--responsive">
+      <div class="slider slider--projects">
+        <div class="related projects">
+          <div class="related__item">
+            <div class="related__img">
+              <img src="./img/related-1.png" alt="" class="img img--responsive">
+            </div>
+            <div class="related__desc">
+              <p class="related__category">Дизельные генераторы</p>
+              <p class="related__title">ДЭС АБИН XX XX XXXX</p>  
+              <ul class="list related__params">
+                <li class="list__item related__param"><span>Основная мощность:</span> 10 кВт / 15 кВа</li>
+                <li class="list__item related__param"><span>Двигатель:</span> iveco-MX 100 </li>
+                <li class="list__item related__param"><span>Генератор:</span> Leroy Somer DX-2017</li>
+              </ul>
+            </div>
           </div>
-          <div class="related__desc">
-            <p class="related__category">Дизельные генераторы</p>
-            <p class="related__title">ДЭС АБИН XX XX XXXX</p>  
-            <ul class="list related__params">
-              <li class="list__item related__param"><span>Основная мощность:</span> 10 кВт / 15 кВа</li>
-              <li class="list__item related__param"><span>Двигатель:</span> iveco-MX 100 </li>
-              <li class="list__item related__param"><span>Генератор:</span> Leroy Somer DX-2017</li>
-            </ul>
+          <div class="related__item">
+            <div class="related__img">
+              <img src="./img/related-2.png" alt="" class="img img--responsive">
+            </div>
+            <div class="related__desc">
+              <p class="related__category">Дизельные генераторы</p>
+              <p class="related__title">ДЭС АБИН XX XX XXXX</p>  
+              <ul class="list related__params">
+                <li class="list__item related__param"><span>Основная мощность:</span> 10 кВт / 15 кВа</li>
+                <li class="list__item related__param"><span>Двигатель:</span> iveco-MX 100 </li>
+                <li class="list__item related__param"><span>Генератор:</span> Leroy Somer DX-2017</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="related__item">
-          <div class="related__img">
-            <img src="./img/related-2.png" alt="" class="img img--responsive">
-          </div>
-          <div class="related__desc">
-            <p class="related__category">Дизельные генераторы</p>
-            <p class="related__title">ДЭС АБИН XX XX XXXX</p>  
-            <ul class="list related__params">
-              <li class="list__item related__param"><span>Основная мощность:</span> 10 кВт / 15 кВа</li>
-              <li class="list__item related__param"><span>Двигатель:</span> iveco-MX 100 </li>
-              <li class="list__item related__param"><span>Генератор:</span> Leroy Somer DX-2017</li>
-            </ul>
-          </div>
-        </div>
-        <div class="related__item">
-          <div class="related__img">
-            <img src="./img/related-3.png" alt="" class="img img--responsive">
-          </div>
-          <div class="related__desc">
-            <p class="related__category">Дизельные генераторы</p>
-            <p class="related__title">ДЭС АБИН XX XX XXXX</p>  
-            <ul class="list related__params">
-              <li class="list__item related__param"><span>Основная мощность:</span> 10 кВт / 15 кВа</li>
-              <li class="list__item related__param"><span>Двигатель:</span> iveco-MX 100 </li>
-              <li class="list__item related__param"><span>Генератор:</span> Leroy Somer DX-2017</li>
-            </ul>
+          <div class="related__item">
+            <div class="related__img">
+              <img src="./img/related-3.png" alt="" class="img img--responsive">
+            </div>
+            <div class="related__desc">
+              <p class="related__category">Дизельные генераторы</p>
+              <p class="related__title">ДЭС АБИН XX XX XXXX</p>  
+              <ul class="list related__params">
+                <li class="list__item related__param"><span>Основная мощность:</span> 10 кВт / 15 кВа</li>
+                <li class="list__item related__param"><span>Двигатель:</span> iveco-MX 100 </li>
+                <li class="list__item related__param"><span>Генератор:</span> Leroy Somer DX-2017</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
