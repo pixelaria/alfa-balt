@@ -135,6 +135,10 @@ p {
       background-image: none;
 
     }
+
+    .container {
+      overflow: unset;
+    }
   }
 
   &--corners-1 {
@@ -1243,6 +1247,8 @@ p {
     left: 0;
     right: 0;
     margin: auto;
+    width: 50px;
+    height:auto;
     
   }
 
@@ -3945,6 +3951,15 @@ p {
   }
 
   &--projects {
+    @media @not-mobiles {
+      margin-bottom: 20px;
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;  
+    }
+    
+
     .slick-list {
       overflow: unset;
     }
@@ -4750,6 +4765,11 @@ p {
     @media @mobiles {
       transition:none;
     }
+  }
+
+  &--single {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /* FOOTER */
@@ -6508,4 +6528,11 @@ p {
   }
   margin-bottom: 20px;
 
+}
+
+[class*="ymaps-2"][class*="-ground-pane"] {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /* Firefox 3.5+ */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+ & Safari 6+ */
 }
