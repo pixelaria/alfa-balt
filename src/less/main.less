@@ -56,7 +56,27 @@ p {
     background-position: bottom center;
     background-repeat: no-repeat;
   }
+  
+  &--page-develop {
+    padding-top: 30px;
+    background-image: url('../img/section-bg-develop-big.png');
+    background-size: cover;
+    background-position: center 10px;
+    background-repeat: no-repeat;
 
+    @media @desktop {
+      background-position:center bottom;
+      background-image: url('../img/section-bg-develop.png');
+    }
+    
+    @media @not-desktop {
+      background-position:center bottom;
+      background-size: 100%;
+      background-image: url('../img/section-page-bg.png'); 
+    }
+
+
+  }
   &--page-3 {
     padding-top: 30px;
     background-image: url('../img/section-bg-page-3.png');
@@ -336,7 +356,15 @@ p {
 }
 
 .hidden {
+  &--desktop {
+    display: none;
 
+    @media @not-desktop {
+      display: block;
+    }
+    
+
+  }
   &--tablet {
     @media @mobiles {
       display: none !important;
