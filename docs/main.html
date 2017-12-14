@@ -30,6 +30,7 @@
   
 </div>
 <header class="header">
+  <div class="header__wrapper"></div>
   <div class="container">
     <a class="header__item header__item--logo" title="Производство дизельных электростанций" href="/">
       Производство дизельных<br>электростанций
@@ -79,7 +80,18 @@
     <div class="container">
       <div class="main-slider">
         <div class="main-slider__slider">
-          <div class="main-slider__slide big-slide main-slider__slide--active" data-id="1">
+          <div class="main-slider__slide big-slide main-slider__slide--active" data-id="0">
+            <div class="big-slide__img">
+              <img src="./img/big-slide.png" alt="" class="img img--responsive">
+            </div>
+            <div class="big-slide__desc">
+              <p class="big-slide__title">Производство дизель-генераторов «под ключ»</p>
+              <p class="big-slide__text">Все стадии разработки. Собственный парк станочного оборудования. Строгое соблюдение сроков и четкое следование проекту.</p>  
+            </div>
+            
+            <a href="#" class="btn btn--orange big-slide__btn">Узнать подробнее</a>
+          </div>
+          <div class="main-slider__slide big-slide" data-id="1">
             <div class="big-slide__img">
               <img src="./img/big-slide.png" alt="" class="img img--responsive">
             </div>
@@ -101,26 +113,15 @@
             
             <a href="#" class="btn btn--orange big-slide__btn">Узнать подробнее</a>
           </div>
-          <div class="main-slider__slide big-slide" data-id="3">
-            <div class="big-slide__img">
-              <img src="./img/big-slide.png" alt="" class="img img--responsive">
-            </div>
-            <div class="big-slide__desc">
-              <p class="big-slide__title">Производство дизель-генераторов «под ключ»</p>
-              <p class="big-slide__text">Все стадии разработки. Собственный парк станочного оборудования. Строгое соблюдение сроков и четкое следование проекту.</p>  
-            </div>
-            
-            <a href="#" class="btn btn--orange big-slide__btn">Узнать подробнее</a>
-          </div>
         </div> 
         <ul class="main-slider__nav slider-nav slider-nav--main">
-          <li class="slider-nav__item slider-nav__item--active" data-target="1">
+          <li class="slider-nav__item slider-nav__item--active" data-target="0">
+            <img src="./img/main-slider-preview.png" alt="" class="img img--responsive">
+          </li>
+          <li class="slider-nav__item" data-target="1">
             <img src="./img/main-slider-preview.png" alt="" class="img img--responsive">
           </li>
           <li class="slider-nav__item" data-target="2">
-            <img src="./img/main-slider-preview.png" alt="" class="img img--responsive">
-          </li>
-          <li class="slider-nav__item" data-target="3">
             <img src="./img/main-slider-preview.png" alt="" class="img img--responsive">
           </li>
         </ul>
@@ -375,13 +376,13 @@
         <div class="page__info col-lg-7">
           <div class="slider slider--images">
             <ul class="slider__list">
-              <li class="slider__item" data-target="1">
+              <li class="slider__item" data-target="0">
                 <img src="./img/factory-1.jpg" alt="" class="img img--responsive">
               </li>
-              <li class="slider__item" data-target="2">
+              <li class="slider__item" data-target="1">
                 <img src="./img/factory-2.jpg" alt="" class="img img--responsive">
               </li>
-              <li class="slider__item" data-target="3">
+              <li class="slider__item" data-target="2">
                 <img src="./img/factory-3.jpg" alt="" class="img img--responsive">
               </li>
             </ul>
@@ -390,9 +391,9 @@
         <div class="col-md-4 col-lg-5 hidden--only-tablet">
           <h2 class="section__title" style="line-height: 32px;">Ключевые преимущества<br>«Альфа Балт Инжиниринг» </h2>
           <ul class="slider-nav">
-            <li class="slider-nav__item slider-nav__item--active" data-target="1">1</li>
-            <li class="slider-nav__item" data-target="2">2</li>
-            <li class="slider-nav__item" data-target="3">3</li>
+            <li class="slider-nav__item slider-nav__item--active" data-target="0">1</li>
+            <li class="slider-nav__item" data-target="1">2</li>
+            <li class="slider-nav__item" data-target="2">3</li>
           </ul>
           <p class="section__text">Оптимальное соотношение цены и качества за счет собственного производства оборудования и металлоконструкций. <a href="#" class="link link--orange">Узнать больше</a></p>
           <div class="hr"></div>

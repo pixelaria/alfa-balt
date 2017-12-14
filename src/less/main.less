@@ -296,7 +296,7 @@ p {
 
 
 .container {
-
+  overflow:hidden;
 
   &:after {
     display: block;
@@ -444,9 +444,14 @@ p {
 
 .header {
   height: 100px;
-  margin-bottom: 5px;
-
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  &__wrapper {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
   
   @media @mobiles {
     height: 70px;
@@ -462,7 +467,8 @@ p {
     align-content: stretch;
 
     height: 100%;
-
+    
+    overflow:unset;
     @media @mobiles {
       display: block;
     }  
@@ -4241,8 +4247,9 @@ p {
     visibility: hidden;
     max-height: 0;
     padding: 0;
-    
-    transition: all 0.3s ease;
+    transform: scale(0.9);
+
+    transition: opacity 0.6s ease, scale 0.6s ease;
     
 
     @media @mobiles {
@@ -4257,7 +4264,7 @@ p {
       visibility: visible;
       max-height: 440px;
       padding: 60px;
-
+      transform: scale(1);
       @media @tablet {
         height: 380px;
         max-height: 380px;
@@ -4565,7 +4572,7 @@ p {
   left: -6px !important;
   top: -3px !important;
 
-
+  cursor: pointer;
 }
 
 .noUi-connect {
@@ -4575,8 +4582,10 @@ p {
 
 .noUi-pips-horizontal {
   top:-35px;
+  height: auto;
   
 }
+
 .noUi-value-horizontal {
   padding-top: 0;
   color: #4d4d4d;
@@ -6055,15 +6064,24 @@ p {
 
 
 .square {
+  text-decoration: none;
   &__title {
     text-align: center;
     color: #2d3e50;
     font-size: 20px;
     font-weight: 700;
+    
+    transition:color 0.3s ease;
     text-decoration: underline;
   }
   &__img {
     margin-bottom: 30px;
+  }
+
+  &:hover {
+    .square__title {
+      color:#e65b35;
+    }
   }
 }
 
@@ -6392,12 +6410,15 @@ p {
     
   &__info, &__img, &__desc {
     max-width: 49%;
+    width: 49%;
 
     @media @tablet {
       max-width: 100%;
+      width: 100%;
     }  
     @media @mobiles {
       max-width: 100%;
+      width: 100%;
     }  
   }
     
