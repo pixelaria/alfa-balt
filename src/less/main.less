@@ -2507,6 +2507,7 @@ p {
     border-radius: 75px;
     margin-bottom: 35px;
     text-align: center;
+    overflow:hidden;
     
     img {
       top: 0;
@@ -2516,6 +2517,8 @@ p {
       position: absolute;
       left: 0;
       right: 0;
+
+      transition: transform 0.3s ease;
 
     }
     @media @mobiles {
@@ -2549,6 +2552,11 @@ p {
   &:hover {
     .type__title {
       color:#e65b35;
+    }
+    .type__img {
+      img {
+        transform:scale(1.1);
+      }
     }
   }
 }
@@ -4718,6 +4726,7 @@ p {
 
 
 .project {
+  cursor: pointer;
   min-width: 280px;
   margin-bottom: 5px;
   max-width: 320px;
@@ -4801,10 +4810,10 @@ p {
     
   }
   
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   
   &:hover {
-    transform: scale(1.01);
+    transform: scale(1.03);
 
     .project__title {
       color:#ed7144;
@@ -5587,7 +5596,7 @@ p {
     text-decoration: none;
     display: block;
     color: #4d4d4d;
-
+    transition: color 0.3s ease;
     &:hover {
       color:#e65b35;
     }
@@ -5595,6 +5604,11 @@ p {
 
   &__img {
     margin-bottom: 40px;
+    overflow: hidden;
+    border-radius: 16px;
+    img {
+      transition: transform 0.3s ease;
+    }
   }
 
   &__title {
@@ -5606,6 +5620,15 @@ p {
     margin-bottom: 0;
     margin-top: 0;
   }
+  
+  &:hover {
+    .category__img {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
 }
 
 .why {
@@ -5631,6 +5654,18 @@ p {
 
   &__img {
     margin-bottom: 20px;
+    width:  235px;
+    height: 235px;
+    overflow:hidden;
+    border-radius: 150px;
+    img {
+      transition:transform 0.3s ease;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
   }
 
   &__title {

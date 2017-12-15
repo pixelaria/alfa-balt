@@ -67,8 +67,8 @@ $(function (){
       dots:true,
       dotsClass: 'slider__nav',
       autoplay: true,
-      autoplaySpeed: 3000,
-      speed: 300
+      autoplaySpeed: 3500,
+      speed: 500
     });
 
     // On swipe event
