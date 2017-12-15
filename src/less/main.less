@@ -121,6 +121,8 @@ p {
       background-color: #ffffff;
       padding-bottom: 0;
     }
+
+    overflow:hidden;
   }
 
   &--corner {
@@ -320,8 +322,6 @@ p {
 
 
 .container {
-  overflow:hidden;
-
   &:after {
     display: block;
     content: "";
@@ -4519,6 +4519,11 @@ p {
     top:0;
     bottom:0;
     margin:auto;
+
+    @media @mobiles {
+      position: relative;
+      display: block;
+    }
   }
 
   &__title {
@@ -4589,6 +4594,9 @@ p {
     &.accordeon--active {
       .accordeon__body {
         padding: 0 40px 40px 40px;
+        @media @mobiles {
+          padding: 0 15px 15px 15px;
+        }
       }
     }
   }
@@ -4730,6 +4738,10 @@ p {
   min-width: 280px;
   margin-bottom: 5px;
   max-width: 320px;
+  
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  transform: translateZ(0);
   
   @media @mobiles {
     max-width: 100%;
@@ -5603,7 +5615,7 @@ p {
   }
 
   &__img {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     overflow: hidden;
     border-radius: 16px;
     img {
@@ -5713,8 +5725,15 @@ p {
   }
 
   .aside {
+    
     width: 31%;
     margin-bottom: 40px;
+
+    @media @mobiles {
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
   margin-bottom: 40px;
 }
@@ -5723,7 +5742,9 @@ p {
   width: 49%;
   margin-bottom: 40px;
   display: flex;
-  
+  @media @mobiles {
+    padding: 0 20px;
+  }
 
   
 
@@ -5758,11 +5779,19 @@ p {
     position: relative;
     width: ~"calc(100% - 220px)";
     margin-right: 20px;
+
+    @media @mobiles {
+      width: 100%;
+    }
   }
 
   &__img {
     width:200px;
     margin-right: 20px;
+
+    @media @mobiles {
+      display: none;
+    }
   }
 
 
@@ -5798,7 +5827,7 @@ p {
     }
   }
 
-  @media @mobile {
+  @media @mobiles {
     width: 100%;
     display:block;
   }
@@ -5807,6 +5836,10 @@ p {
   &__link {
     position: absolute;
     bottom: 0;
+
+    @media @mobiles {
+      position: relative;
+    }
   }
 }
 
