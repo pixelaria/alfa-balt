@@ -4,7 +4,7 @@
 
 <main>
   <section class="section section--corner">
-    <div class="container">
+    <div class="container container--overflow">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Каталог продукции</a></li>
@@ -19,18 +19,20 @@
         </div>
         <div class="product-page__img">
           <div class="row">
-            <div class="product__image col-md-9 col-lg-12">
-              <img src="./img/product-2.png" alt="" class="img img--responsive">
+            <div class="product__image product__image--main col-md-9 col-lg-12">
+              <img class="product__img" src="./img/product-2.png" alt="" data-id="1">
+              <img class="product__img" src="./img/related-2.png" alt="" data-id="2">
+              <img class="product__img" src="./img/related-3.png" alt="" data-id="3">
             </div>  
             <div class="product__images col-md-3 col-lg-12">
-              <div class="product__image product__image--sm">
+              <div class="product__image product__image--sm" data-target="1">
                 <img src="./img/product-2.png" alt="" class="img img--responsive">
               </div>
-              <div class="product__image product__image--sm">
-                <img src="./img/product-2.png" alt="" class="img img--responsive">
+              <div class="product__image product__image--sm" data-target="2">
+                <img src="./img/related-2.png" alt="" class="img img--responsive">
               </div>
-              <div class="product__image product__image--sm">
-                <img src="./img/product-2.png" alt="" class="img img--responsive">
+              <div class="product__image product__image--sm" data-target="3">
+                <img src="./img/related-3.png" alt="" class="img img--responsive">
               </div>
             </div>
           </div>
@@ -38,25 +40,27 @@
         </div>
         <div class="product-page__desc">
           <div class="product__params">
-            <div class="product__param product-param product-param--flash-orange">
-              <div class="product-param__title">Основная мощность (?):</div>
-              <div class="product-param__value">10 кВт / 15 кВА</div>
-            </div>
-            <div class="product__param product-param product-param--engine">
-              <div class="product-param__title">Двигатель (?):</div>
-              <div class="product-param__value">Iveco MX-100</div>
-            </div>
-            <div class="product__param product-param product-param--electro">
-              <div class="product-param__title">Напряжение (?):</div>
-              <div class="product-param__value">380 В</div>
-            </div>
-            <div class="product__param product-param product-param--flash-orange">
-              <div class="product-param__title">Резервная мощность (?):</div>
-              <div class="product-param__value">10 кВт / 15 кВА</div>
-            </div>
-            <div class="product__param product-param product-param--battery">
-              <div class="product-param__title">Генератор (?):</div>
-              <div class="product-param__value">Leroy Somer</div>
+            <div class="product-params">
+              <div class="product__param product-param product-param--flash-orange">
+                <div class="product-param__title">Основная мощность (?):</div>
+                <div class="product-param__value">10 кВт / 15 кВА</div>
+              </div>
+              <div class="product__param product-param product-param--engine">
+                <div class="product-param__title">Двигатель (?):</div>
+                <div class="product-param__value">Iveco MX-100</div>
+              </div>
+              <div class="product__param product-param product-param--electro">
+                <div class="product-param__title">Напряжение (?):</div>
+                <div class="product-param__value">380 В</div>
+              </div>
+              <div class="product__param product-param product-param--flash-orange">
+                <div class="product-param__title">Резервная мощность (?):</div>
+                <div class="product-param__value">10 кВт / 15 кВА</div>
+              </div>
+              <div class="product__param product-param product-param--battery">
+                <div class="product-param__title">Генератор (?):</div>
+                <div class="product-param__value">Leroy Somer</div>
+              </div>
             </div>
           </div>
           <div class="product__types product-types">
@@ -97,7 +101,7 @@
           <p class="section__text">Дизель-генератор АБИН(ЯМЗ)XXX-XX-XX предназначен для выработки трехфазного электрического тока напряжением 380 В объектах строительства, промышленности и резервирования сети на муниципальных учреждениях, в том числе участков и систем с высокой степенью ответственности.</p>
         </div>
         <div class="col-lg-4 section__links">
-          <a href="#" class="btn btn--inline btn--tr">Скачать спецификацию</a>
+          <a href="#" class="btn btn--inline btn--gray">Скачать спецификацию</a>
           <a href="#" class="btn btn--inline btn--tr">Опросный лист</a>
         </div>
       </div>

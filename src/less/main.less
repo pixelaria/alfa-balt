@@ -331,6 +331,10 @@ p {
   @media @mobiles {
     padding: 0 20px;
   }
+
+  &--overflow {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
@@ -1323,6 +1327,11 @@ p {
     font-weight: 400;
     
     margin-bottom: 15px;
+    transition: box-shadow 0.3s ease;
+    
+    &:hover {
+      box-shadow: inset 0 2px 2px rgba(135, 135, 135, 0.3);
+    }
   }
 
   &--tr {
@@ -1330,7 +1339,7 @@ p {
     border: 1px solid #4d4d4d;
     
     transition: all 0.3s ease;
-
+    margin-bottom: 15px;
     &:hover {
       color:#ed7144;
       border: 1px solid #ed7144;
@@ -6376,29 +6385,45 @@ p {
   &__title {
     margin-bottom: 5px;
   }
+
+  img {
+    max-width: 380px;
+  }
+  
   &__image {
+    position: relative;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
     
+    
+    height: 310px;
 
     @media @tablet {
       order:2;
     }
 
-    img {
-      max-width: 380px;
-    }
+    
     
     &--sm {
       width: 30%;
+      height: auto;
       border-radius: 8px;
       border: 1px solid #e4e4e4;
       background-color: #ffffff;
       padding: 5px 15px;
 
       cursor: pointer;
+      overflow: hidden;
+      img {
+        transition: transform 0.3s ease;
+      }
+      &:hover {
+        img {
+          transform:scale(1.1);
+        }
+      }
 
       @media @tablet {
         width: 100%;
@@ -6406,6 +6431,18 @@ p {
       }
     }
   }
+
+  &__img {
+    
+    //opacity: 0;
+    width: 380px;
+    height: 310px;
+    margin: 0 30px;
+    //position: absolute;
+    
+    
+  } 
+
   &__images {
 
     display: flex;
@@ -6446,12 +6483,7 @@ p {
     border: 1px solid #959595;
     padding: 20px;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
-    align-content: center;
+    
   
     margin-bottom: 30px;
 
@@ -6524,6 +6556,20 @@ p {
 
   
 }
+.product-params {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: center;
+  align-content: center;
+
+  &:after {
+    content:'';
+    width: 133px;
+  }
+
+}
 
 .product-types {
   display: flex;
@@ -6563,7 +6609,7 @@ p {
 
   &__type {
     display: block;
-    width: 100px;
+    width: 120px;
     
 
     @media @desktop {
@@ -6648,6 +6694,7 @@ p {
     font-size: 12px;
     line-height: 22px;
     font-weight: 400;
+    cursor: pointer;
   }
 
   &__value {
