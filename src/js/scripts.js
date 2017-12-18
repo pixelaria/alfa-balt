@@ -233,7 +233,7 @@ $(function (){
     function auto(){
        intv = setInterval(function() {
             $('.main-slider .slider-nav__item').eq( current++%slN  ).click();
-       }, 3500 );       
+       }, 5000 );       
     }
     auto(); // to start immediately auto-slide
 

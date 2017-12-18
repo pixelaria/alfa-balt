@@ -4418,7 +4418,7 @@ p {
       display: block;
       
       opacity: 0.5;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease-in;
       padding:5px;
 
       &:hover,&--active {
@@ -4478,7 +4478,7 @@ p {
     padding: 0;
     transform: scale(0.9);
 
-    transition: opacity 0.6s ease, scale 0.6s ease;
+    //transition: opacity 0.6s ease, scale 0.6s ease;
     
 
     @media @mobiles {
@@ -4576,9 +4576,9 @@ p {
     margin-right: 15px;
     position: absolute;
 
-    left: -400px;
+    left: -300px;
 
-    transition: left 1s ease;
+    transition: left 0.75s ease-in;
 
     @media @tablet {
       width: 300px;
@@ -4597,9 +4597,9 @@ p {
     position: absolute;
     width: 50%;
     right: 60px;
-    top: -400px;
+    top: -250px;
 
-    transition: top 1s ease;
+    transition: top 0.75s ease-in;
 
     @media @mobiles {
       width: 100%;
@@ -4631,10 +4631,10 @@ p {
 
   &__btn {
     position: absolute;
-    bottom: -400px;
-    right: -400px;
+    bottom: -250px;
+    right: -250px;
     
-    transition: bottom 1s ease, right 1s ease;
+    transition: bottom 0.75s ease-in, right 0.75s ease-in;
 
     @media @mobiles {
       position: relative !important;
