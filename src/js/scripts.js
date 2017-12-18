@@ -81,16 +81,16 @@ $(function (){
   $('.tabs__link').click(function(e){
     var w_width = $(window).width();
     var target = $(this).data('target');
-    if (w_width<788) {
-      $(this).toggleClass('tabs__link--active');
-      $('.tabs__body[data-name="'+target+'"]').toggleClass('tabs__body--active');
-     } else {
+    //if (w_width<788) {
+     // $(this).toggleClass('tabs__link--active');
+      //$('.tabs__body[data-name="'+target+'"]').toggleClass('tabs__body--active');
+     //} else {
       
       $('.tabs__link').removeClass('tabs__link--active');
       $(this).addClass('tabs__link--active');
       $('.tabs__body').removeClass('tabs__body--active');
       $('.tabs__body[data-name="'+target+'"]').addClass('tabs__body--active');
-    }
+    //}
   });
 
 

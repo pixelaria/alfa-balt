@@ -456,10 +456,14 @@ p {
   }
 }
 
-.about {
+.aboutpg {
   &__link {
+    display: none !important;;
+
     @media @tablet {
-      position: absolute;right: 0;
+      display: block !important;
+      position: absolute;
+      right: 0;
       top:58px;
       width: 210px;
       line-height: 52px;
@@ -470,6 +474,7 @@ p {
     }
 
     @media @mobiles {
+      display: block !important;
       top:auto;
       bottom: 0;
       left: 0;
@@ -2461,6 +2466,7 @@ p {
     display: block;
     .industries__item {
       width: 100%;
+      min-width: 100%;
     }
   }
 
