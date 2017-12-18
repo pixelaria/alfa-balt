@@ -112,7 +112,6 @@ $(function (){
         $('.product__img--active').removeClass('product__img--active');
         $('.product__img[data-id="'+target+'"]').addClass('product__img--active');  
       }
-      
     });
     
   }
@@ -128,7 +127,6 @@ $(function (){
     });
 
     // On swipe event
-
     if ($('.slider-desc').length) {
       $('.slider--images').on('beforeChange', function(event, slick,  currentSlide, nextSlide){
         $('.slider-desc__item[data-id="'+currentSlide+'"]').removeClass('slider-desc__item--active');
@@ -145,8 +143,14 @@ $(function (){
         $('.slider-nav__item').removeClass('slider-nav__item--active');
         $(this).addClass('slider-nav__item--active');
       });
+
+      $('.slider--images').on('beforeChange', function(event, slick,  currentSlide, nextSlide){
+        $('.slider-nav__item').removeClass('slider-nav__item--active');
+        $('.slider-nav__item[data-target="'+nextSlide+'"]').addClass('slider-nav__item--active');
+      });
     }
   }
+
   if ($('.slider--projects').length) {
     $('.slider--projects .projects').slick({
       arrows:true,
@@ -155,11 +159,10 @@ $(function (){
       
       dotsClass: 'slider__nav slider__nav--dark',
       slidesToShow: 3,
-      autoplay: true,
+      //autoplay: true,
       autoplaySpeed: 5000,
-
+      infinite: true,
       responsive: [
-        
         {
           breakpoint: 1024,
           settings: {
@@ -205,7 +208,7 @@ $(function (){
     $('.slider--news').slick({
       infinite: true,
       
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3500,
       dots:true,
       arrows:false,
@@ -218,7 +221,7 @@ $(function (){
           settings: "unslick"
         },
         {
-          breakpoint: 480,
+          breakpoint: 768,
           settings: {slidesToShow: 1,slidesToScroll: 1}
           
         }
@@ -228,12 +231,12 @@ $(function (){
 
   if ($('.main-slider').length) {
     var current = 0;  // STARTING SLIDE(<li>element button) INDEX
-    var slN = $('.main-slider .slider-nav__item').length; // get number of slides(buttons.. all the same)
+    var slN = $('.main-slider-nav__item').length; // get number of slides(buttons.. all the same)
 
     function auto(){
-       intv = setInterval(function() {
-            $('.main-slider .slider-nav__item').eq( current++%slN  ).click();
-       }, 5000 );       
+      intv = setInterval(function() {
+        $('.main-slider-nav__item').eq( current++%slN  ).click();
+      }, 5000 );       
     }
     auto(); // to start immediately auto-slide
 
@@ -244,15 +247,15 @@ $(function (){
     });
 
 
-    $('.main-slider .slider-nav__item').click(function(e){
+    $('.main-slider-nav__item').click(function(e){
       var target  = $(this).data('target');
-      $('.main-slider .slider-nav__item').removeClass('slider-nav__item--active');
-      $(this).addClass('slider-nav__item--active');
+      
+      $('.main-slider-nav__item').removeClass('main-slider-nav__item--active');
+      $('.main-slider-nav__item[data-target="'+target+'"]').addClass('main-slider-nav__item--active');
 
       $('.main-slider__slide').removeClass('main-slider__slide--active');
       $('.main-slider__slide[data-id="'+target+'"]').addClass('main-slider__slide--active');
 
-      
     });
     
   }
