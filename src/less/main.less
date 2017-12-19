@@ -574,6 +574,11 @@ p {
   }
 }
 
+.main {
+  &--fixed {
+    margin-top: 100px;
+  } 
+}
 
 .header {
   height: 100px;
@@ -586,6 +591,116 @@ p {
     bottom: 0;
   }
   
+  z-index: 9999;
+  background-color: #ffffff;
+  
+  &--fixed {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    right: 0;
+
+    transition:top 0.5s ease;
+
+
+    height: 70px;
+
+    .nav--active {
+      position: fixed;
+    }
+
+    .header__item--logo {
+      font-size: 0;
+      height: 55px;
+      padding-right: 0;
+      position: absolute;
+      left: 0;
+      top:0;
+      bottom: 0;
+      margin:auto;
+
+      @media @mobiles {
+        left: 15px;
+      }
+      @media @tablet {
+        left: 15px; 
+      }
+    }
+
+    .header__item--nav {
+      position: absolute;
+      top:0;
+      bottom: 0;
+      margin:auto;
+      left: 150px;
+      display: flex;
+      align-items: center;
+
+
+      @media @mobiles {
+        right: 0;
+        left: auto;
+      }
+
+      @media @tablet {
+        right: 0;
+        left: auto;
+      }
+    }
+
+    .header__item--search {
+      position: absolute;
+      right: 0;
+      top:0;
+      bottom: 0;
+      margin:auto;
+      height: 50px;
+
+      display: flex;
+      align-items: center;
+
+      @media @mobiles {
+        display:none;
+      }
+
+      @media @tablet {
+        display:none;
+      }
+    }
+
+    .header__item--callback {
+      position: absolute;
+      right: 30px;
+      top:0;
+      bottom: 0;
+      margin:auto;
+
+      display: flex;
+      align-items: center;
+
+      @media @mobiles {
+        right: 75px;
+        left: auto;
+      }
+
+      @media @tablet {
+        right: 75px;
+        left: auto;
+      }
+    }
+
+
+    .callback__link {
+      display: none;
+    }
+
+
+  }
+
+  &--top {
+    top:0;
+  }
+
   @media @mobiles {
     height: 70px;
   }
@@ -625,6 +740,9 @@ p {
   &__item {
     display: block;
     
+    &--search {
+      display: none;
+    }
     &--logo {
       padding-left: 150px;
       position: relative;
@@ -659,10 +777,15 @@ p {
       }
 
       @media @mobiles {
-       font-size: 0;
-        width: 65px;
-        height: 40px;
+        font-size: 0;
+        height: 50px;
         float: left;
+
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
       }
     }
 
@@ -1858,7 +1981,7 @@ p {
     @media @mobiles {
       line-height: 50px;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 
@@ -1969,6 +2092,14 @@ p {
       background-repeat: no-repeat;
       background-size: contain;
     }
+
+
+    &--black {
+      &:after {
+        top: 2px;
+        background-image: url('../img/icon-search-black.png');
+      }
+    }
         
     cursor: pointer;
 
@@ -1980,8 +2111,10 @@ p {
     z-index: -1;
 
     position: absolute;
-    right: 30px;
-    top:10px;
+    right: 40px;
+    top:0;
+    bottom: 0;
+    margin: auto;
     transition: all 0.5s ease;
   }
 

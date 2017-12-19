@@ -1,6 +1,24 @@
 $(function (){
   console.log('init');
 
+  $(window).scroll(function(){
+    var header = $('.header'),
+        main = $('main'),
+        scroll = $(window).scrollTop();
+
+    if (scroll >= 145) {
+      header.addClass('header--fixed');
+      main.addClass('main--fixed');
+    } else {
+      header.removeClass('header--fixed');
+      main.removeClass('main--fixed');
+    }
+
+    if (scroll >= 245) header.addClass('header--top');
+    else header.removeClass('header--top');
+
+  });
+
   if ($('.main__clipper').length) {
     
     baron({
