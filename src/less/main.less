@@ -7439,3 +7439,34 @@ p {
     height: 0;
     display: none;
 }
+
+
+
+.scroll-to-top {
+  display:none;
+  position: fixed;
+  
+  right: 50px;
+  top:0;
+  bottom: 0;
+  margin: auto;
+  width: 50px;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(128, 128, 128, 0.3);
+
+  background-image: url('../img/scroll-to-top.png');
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+  cursor: pointer;
+  z-index: 9999;
+
+  @media @mobiles {
+    right: 20px;
+    width: 40px;
+    height: 50px;
+    background-size: 50%;
+  }
+}

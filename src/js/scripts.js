@@ -1,6 +1,8 @@
 $(function (){
   console.log('init');
 
+  $('main').append('<div class="scroll-to-top"></div>');
+
   $(window).scroll(function(){
     var header = $('.header'),
         main = $('main'),
@@ -17,6 +19,21 @@ $(function (){
     if (scroll >= 245) header.addClass('header--top');
     else header.removeClass('header--top');
 
+
+
+    if (scroll >= 300) {
+        $('.scroll-to-top').fadeIn();
+    } else {
+        $('.scroll-to-top').fadeOut();
+    }
+
+  });
+
+  $('.scroll-to-top').click(function () {
+      $('body,html').animate({
+          scrollTop: 0
+      }, 400);
+      return false;
   });
 
   if ($('.main__clipper').length) {
