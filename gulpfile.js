@@ -18,6 +18,7 @@ var gulp = require('gulp'),
   fileinclude = require('gulp-file-include'),
   cssnano = require('gulp-cssnano'),
   notify = require('gulp-notify'),
+  cache = require('gulp-cache'),
   zip = require('gulp-zip');
 
 // Компиляция LESS
@@ -82,7 +83,7 @@ gulp.task('html', function() {
 // Оптимизация изображений
 gulp.task('img', function() {
   console.log('---------- Копирование и оптимизация картинок');
-    return gulp.src('src/img//*.*') // Берем все изображения из app
+    return gulp.src('src/img/*.*') // Берем все изображения из app
         .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
