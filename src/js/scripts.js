@@ -372,4 +372,80 @@ $(function (){
     
   });
 
+  function add_to_compare(id){
+    console.log("add_to_compare "+id);
+    var chek = document.getElementById('compare_'+id);
+    if(!chek) chek = document.getElementById('compare_'+id);
+
+    if (chek.checked){//Добавить 
+        var count = $('#srCount').html() * 1 + 1;
+        $('#srCount').html(count);     
+        $.ajax({
+            url: "/ajax/compare.php?action=ADD_TO_COMPARE_LIST&id="+id, 
+            success: function(result){
+                $("#flbl").html(result);
+                
+                if ($('.js-compare-products-carousel').length) {
+                    $('.js-compare-products-carousel .block-line').slick({
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: false,
+                        infinite: true,
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 3
+                                }
+                            },
+                            {
+                                breakpoint: 769,
+                                settings: {
+                                    slidesToShow: 1
+                                }
+                            }
+                        ]
+                    });
+                }
+            }
+        });
+    }else{//Удалить  
+        var count = $('#srCount').html() * 1 - 1;
+        $('#srCount').html(count);          
+        $.ajax({
+            url: "/ajax/compare.php?action=DELETE_FROM_COMPARE_LIST&id="+id, 
+            success: function(result){
+                $("#flbl").html(result);
+                if ($('.js-compare-products-carousel').length) {
+                    $('.js-compare-products-carousel .block-line').slick({
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: false,
+                        infinite: true,
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 3
+                                }
+                            },
+                            {
+                                breakpoint: 769,
+                                settings: {
+                                    slidesToShow: 1
+                                }
+                            }
+                        ]
+                    });
+                }
+            }
+        });    
+    }
+    
+    $('.flyBlock').show();
+}
+
+
 });
