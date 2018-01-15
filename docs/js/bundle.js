@@ -1,6 +1,9 @@
 
 function onLoadjqm(hash){var name=$(hash.t).data('name');if($(hash.t).data('autohide')){$(hash.w).data('autohide',$(hash.t).data('autohide'));}
-if(name=='order_product'){}}
+if(name=='callprice'){if($(hash.t).data('product')){var product=$(hash.t).data('product');var box=$(hash.t).data('box');if(box){product=product+' ('+box+')';}
+$('input[name="PRODUCT"]').val(product);$('input[name="PRODUCT"]').parent().hide();}
+if($(hash.t).data('title')){$('span.title').html($(hash.t).data('title'));}
+if($(hash.t).data('product-type')){$('.popup__body').prepend('<hr/>');$('.popup__body').prepend('<p class="popup__info">Исполнение: <span>'+$(hash.t).data('product-type')+'</span></p>');$('.popup__body').prepend('<p class="popup__info popup__info--full">'+$(hash.t).data('product')+'</p>');}}}
 function onHide(hash){if($(hash.w).data('autohide')){eval($(hash.w).data('autohide'));}
 hash.w.empty();hash.o.remove();hash.w.removeClass('show');}
 $.fn.jqmEx=function(){$(this).each(function(){var _this=$(this);var name=_this.data('name');if(name.length){var script='/bitrix/components/pixelaria/form/ajax/form.php';var paramsStr='';var trigger='';var arTriggerAttrs={};$.each(_this.get(0).attributes,function(index,attr){var attrName=attr.nodeName;var attrValue=_this.attr(attrName);trigger+='['+attrName+'=\"'+attrValue+'\"]';arTriggerAttrs[attrName]=attrValue;if(/^data\-param\-(.+)$/.test(attrName)){var key=attrName.match(/^data\-param\-(.+)$/)[1];paramsStr+=key+'='+attrValue+'&';}});var triggerAttrs=JSON.stringify(arTriggerAttrs);var encTriggerAttrs=encodeURIComponent(triggerAttrs);script+='?'+paramsStr+'data-trigger='+encTriggerAttrs;if(!$('.'+name+'_frame[data-trigger="'+encTriggerAttrs+'"]').length){if(_this.attr('disabled')!='disabled'){$('body').find('.'+name+'_frame[data-trigger="'+encTriggerAttrs+'"]').remove();$('body').append('<div class="'+name+'_frame jqmWindow" style="width:500px" data-trigger="'+encTriggerAttrs+'"></div>');$('.'+name+'_frame[data-trigger="'+encTriggerAttrs+'"]').jqm({trigger:trigger,onLoad:function(hash){onLoadjqm(hash);},onHide:function(hash){onHide(hash);},ajax:script,});}}}})}

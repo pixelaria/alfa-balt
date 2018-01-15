@@ -5,8 +5,8 @@ function onLoadjqm(hash){
     $(hash.w).data('autohide', $(hash.t).data('autohide'));
   }
 
-  if(name == 'order_product'){
-    /*if($(hash.t).data('product')) {
+  if(name == 'callprice'){
+    if($(hash.t).data('product')) {
       var product = $(hash.t).data('product');
       var box = $(hash.t).data('box');
       if(box) {
@@ -20,17 +20,11 @@ function onLoadjqm(hash){
       $('span.title').html($(hash.t).data('title'));
     }
 
-    if($(hash.t).data('price')) {
-      $('.popup__body').prepend('<p class="popup__info">Стоимость: <span>'+$(hash.t).data('price')+'</span></p>');
+    if($(hash.t).data('product-type')) {
+      $('.popup__body').prepend('<hr/>');
+      $('.popup__body').prepend('<p class="popup__info">Исполнение: <span>'+$(hash.t).data('product-type')+'</span></p>');
+      $('.popup__body').prepend('<p class="popup__info popup__info--full">'+$(hash.t).data('product')+'</p>');
     }
-
-    if($(hash.t).data('box')) {
-      $('.popup__body').prepend('<p class="popup__info">Вариант поставки: <span>'+$(hash.t).data('box')+'</span></p>');
-    }
-
-    if($(hash.t).data('version')) {
-      $('.popup__body').prepend('<p class="popup__info">Версия: <span>'+$(hash.t).data('version')+'</span></p>');
-    }*/
   }
 }
 

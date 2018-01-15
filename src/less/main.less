@@ -25,6 +25,7 @@ p {
 .hr {
   height: 1px;
   background-color: #cecece;
+
   margin-top: -15px;
   margin-bottom: 15px;
 
@@ -1714,6 +1715,10 @@ p {
     @media @mobiles {
       display: block;
     }
+  }
+
+  &--full {
+    width: 100%;
   }
 }
 
@@ -3415,7 +3420,11 @@ p {
 
     }
   }
+  
 
+  &--error {
+    border: 1px solid #ff0000;
+  }
   &:last-child {
     //margin-bottom: 0;
   }
@@ -7634,29 +7643,40 @@ div[id^="wait_comp"], .bx-core-waitwindow {
   background-color: #ffffff;
 
   &__header {
-    padding: 15px 40px;
+    padding: 0 40px;
+    height: 60px;
+    line-height: 100px;
     background-color: #4d4d4d;
 
     @media @mobiles {
       padding: 15px;
     }
   }
-  &__butons {
+
+  &__buttons {
     background-color: #ffffff;
+    margin-bottom: 25px;
   }
 
   &__info {
     color: #000000;
+    margin-bottom: 10px;
+    
+    &--full {
+      font-weight: bold;
+    }
+
     span {
       float: right;
       font-weight: bold;
+      color:#ed7144;
     }   
   }
 
   &__title {
     font-size: 20px;
-    line-height: 32px;
-    font-weight: 500;
+    line-height: 60px;
+    font-weight: 700;
     margin:0;
    
     color:#ffffff;
@@ -7680,7 +7700,8 @@ div[id^="wait_comp"], .bx-core-waitwindow {
   }
 
   &__body {
-    padding: 15px 40px;
+    padding: 30px 40px;
+
     @media @mobiles {
       padding: 15px;
     }
@@ -7688,14 +7709,22 @@ div[id^="wait_comp"], .bx-core-waitwindow {
   
   &__closer {
     position: absolute;
-    right: 40px;
-    top: 25px;
+    right: 20px;
+    top: 20px;
     display: none;
   }
 
   &__error {
     margin-top: 5px;
     color:#BC0101;
+  }
+
+  .input-group {
+    margin-bottom: 35px;
+  }
+
+  &__privacy {
+    font-size: 12px;
   }
 }
 
