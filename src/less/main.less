@@ -3407,7 +3407,7 @@ p {
   height: 50px;
   border-radius: 16px;
   background-color: #f8f8f8;
-  
+  transition: border-color 0.3s ease;
   &--text {
     height: 130px;
   }
@@ -3420,10 +3420,28 @@ p {
 
     }
   }
-  
+  border: 1px solid transparent;
+
+  &:after {
+    content:'';
+    opacity: 0;
+    
+    position: absolute;
+    top: -18px;
+    font-size: 12px;
+    color: #bc0101;
+    right: 25px;
+    transition: opacity 0.3s ease;
+  }
 
   &--error {
-    border: 1px solid #ff0000;
+    border: 1px solid #bc0101;
+    
+    &:after {
+      content: 'Это обязательное поле';
+      opacity: 1;
+    }
+    
   }
   &:last-child {
     //margin-bottom: 0;
@@ -7640,7 +7658,7 @@ div[id^="wait_comp"], .bx-core-waitwindow {
 
 .popup {
   
-  background-color: #ffffff;
+  background-color: transparent;
 
   &__header {
     padding: 0 40px;
@@ -7701,7 +7719,7 @@ div[id^="wait_comp"], .bx-core-waitwindow {
 
   &__body {
     padding: 30px 40px;
-
+    background-color: #ffffff;
     @media @mobiles {
       padding: 15px;
     }
@@ -7792,6 +7810,7 @@ div[id^="wait_comp"], .bx-core-waitwindow {
   right:0 !important;
   margin: auto !important;
   z-index: 10001 !important;
+  background-color: transparent;
   @media @mobiles {
     width:90% !important;
     top:1% !important;
