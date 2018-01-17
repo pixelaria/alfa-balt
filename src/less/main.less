@@ -4,6 +4,10 @@
 @import "./imports/_fonts.less";
 
 
+* {
+  outline:none;
+}
+
 /* Typography */
 
 body {
@@ -3852,6 +3856,7 @@ p {
   &__link {
     display: inline-block;
     margin: 0;
+    cursor: pointer;
 
     transition: color 0.3s ease;
     color: #4d4d4d;
@@ -3866,6 +3871,7 @@ p {
       content: '/';
       position: absolute;
       right: -20px;
+      color: #4d4d4d;
     }
 
     &:last-child {
@@ -4267,7 +4273,8 @@ p {
     cursor: pointer;
     
     min-width: 60px;
-
+    width: 60px;
+    
     &:hover+.product-row__desc {
       .product-row__name {
         color: #ed7144;
@@ -5350,6 +5357,7 @@ p {
   
   box-shadow: 0 2px 4px rgba(128, 128, 128, 0.3);
   border-radius: 8px;
+  overflow: hidden;
   
   
   
@@ -5403,7 +5411,11 @@ p {
     width: 45px;
     height: 45px;
   }
-
+    
+  &__image {
+    width: 320px;
+    height: 170px;
+  }
   &__info {
     display: inline-block;
     color: #3c3c3c;

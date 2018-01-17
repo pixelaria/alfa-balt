@@ -379,62 +379,6 @@ $(function (){
   }
 
 
-  $('.type-filter__item').click(function(e){
-    $('.type-filter__item').removeClass('type-filter__item--active');
-    $(this).addClass('type-filter__item--active');
-    return false;
-  });
-  
-  
-
-
-  if ($('#price-slider').length) {
-    var min = $('#min-price'); 
-    var max = $('#max-price'); 
-    var minVal = 0; 
-    var maxVal = 3000; 
-    var start = 400;
-    var end = 1500;
-    var step = 1; 
-    
-    var slider = $("#price-slider").noUiSlider({
-      start: [500, 1000],
-      range: {
-        'min': minVal,
-        'max': maxVal
-      },
-
-      connect: true,
-      step: step,
-    });
-
-
-
-    function updatePips( value, type ){
-
-        switch(true)   {
-            case (value > 300):
-             //   value = "More"
-                break;       
-        }
-        return value;
-    }
-
-    slider.noUiSlider_pips({
-      mode: 'values',
-      density: 5,
-      values: [0,600,1200,1800,2400,3000,],
-      stepped: true,
-        
-    });
-
-    
-    setTimeout(function(){
-      slider.Link('lower').to(min);
-      slider.Link('upper').to(max);
-    },400);
-  }
-
   $('.link--readmore').click(function(e){
     console.log('readmore');
     var target = $(this).data('target');
