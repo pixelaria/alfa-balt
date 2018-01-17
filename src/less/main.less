@@ -24,6 +24,7 @@ html {
 p {
   margin-top: 0;
   margin-bottom: 0;
+  //line-height: 1.5;
 }
 
 .hr {
@@ -5373,12 +5374,20 @@ p {
     margin-left: auto;
     margin-right: auto;
   }
+  background-color: #f8f8f8;
   &__desc {
     position: relative;
     background-color: #f8f8f8;
     padding:30px 25px 30px 25px;  
+    
   }
 
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    width: 100%;
+  }
   &__title {
     margin:0;
     color: #3c3c3c;
@@ -5414,7 +5423,7 @@ p {
     
   &__image {
     width: 320px;
-    height: 170px;
+    height: 180px;
   }
   &__info {
     display: inline-block;
