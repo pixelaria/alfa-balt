@@ -1,3 +1,86 @@
+function add_to_compare(id){
+    console.log("add_to_compare "+id);
+    var chek = document.getElementById('compare_'+id);
+    
+    var chek = $('#compare_'+id);
+    if (!chek.prop("checked")){ //Добавить 
+        console.log('выбрали');
+        var count = $('#compareCount').html() * 1 + 1;
+        $('#compareCount').html(count);     
+        
+        console.log("/ajax/compare.php?action=ADD_TO_COMPARE_LIST&id="+id);
+
+        $.ajax({
+            url: "/ajax/compare.php?action=ADD_TO_COMPARE_LIST&id="+id, 
+            success: function(result){
+              console.log(result);
+              //$("#flbl").html(result);
+              
+              if ($('.js-compare-products-carousel').length) {
+                  $('.js-compare-products-carousel .block-line').slick({
+                      slidesToShow: 5,
+                      slidesToScroll: 1,
+                      arrows: true,
+                      dots: false,
+                      infinite: true,
+                      responsive: [
+                          {
+                              breakpoint: 1024,
+                              settings: {
+                                  slidesToShow: 3
+                              }
+                          },
+                          {
+                              breakpoint: 769,
+                              settings: {
+                                  slidesToShow: 1
+                              }
+                          }
+                      ]
+                  });
+              }
+            }
+        });
+    }else{//Удалить  
+        console.log('сняли');
+        var count = $('#compareCount').html() * 1 - 1;
+        $('#compareCount').html(count); 
+
+        console.log("/ajax/compare.php?action=DELETE_FROM_COMPARE_LIST&id="+id);
+        $.ajax({
+            url: "/ajax/compare.php?action=DELETE_FROM_COMPARE_LIST&id="+id, 
+            success: function(result){
+              //$("#flbl").html(result);
+              if ($('.js-compare-products-carousel').length) {
+                  $('.js-compare-products-carousel .block-line').slick({
+                      slidesToShow: 5,
+                      slidesToScroll: 1,
+                      arrows: true,
+                      dots: false,
+                      infinite: true,
+                      responsive: [
+                          {
+                              breakpoint: 1024,
+                              settings: {
+                                  slidesToShow: 3
+                              }
+                          },
+                          {
+                              breakpoint: 769,
+                              settings: {
+                                  slidesToShow: 1
+                              }
+                          }
+                      ]
+                  });
+              }
+            }
+        });    
+    }
+    
+    $('.footer-compare').addClass('footer-compare--active');
+}
+
 function onLoadjqm(hash){
   var name = $(hash.t).data('name');
 
@@ -232,6 +315,11 @@ $(function (){
 
 
 
+  $('.product-types__type').click(function(e){
+    $('.product-types__type').removeClass('product-types__type--active');
+    $(this).addClass('product-types__type--active');
+  });
+
   if ($('.slider--images').length) {
     var slider_images = $('.slider--images .slider__list').slick({
       arrows:false,
@@ -399,82 +487,6 @@ $(function (){
     
   });
 
-  function add_to_compare(id){
-    console.log("add_to_compare "+id);
-    var chek = document.getElementById('compare_'+id);
-    if(!chek) chek = document.getElementById('compare_'+id);
-
-    if (chek.checked){//Добавить 
-        var count = $('#srCount').html() * 1 + 1;
-        $('#srCount').html(count);     
-        $.ajax({
-            url: "/ajax/compare.php?action=ADD_TO_COMPARE_LIST&id="+id, 
-            success: function(result){
-                $("#flbl").html(result);
-                
-                if ($('.js-compare-products-carousel').length) {
-                    $('.js-compare-products-carousel .block-line').slick({
-                        slidesToShow: 5,
-                        slidesToScroll: 1,
-                        arrows: true,
-                        dots: false,
-                        infinite: true,
-                        responsive: [
-                            {
-                                breakpoint: 1024,
-                                settings: {
-                                    slidesToShow: 3
-                                }
-                            },
-                            {
-                                breakpoint: 769,
-                                settings: {
-                                    slidesToShow: 1
-                                }
-                            }
-                        ]
-                    });
-                }
-            }
-        });
-    }else{//Удалить  
-        var count = $('#srCount').html() * 1 - 1;
-        $('#srCount').html(count);          
-        $.ajax({
-            url: "/ajax/compare.php?action=DELETE_FROM_COMPARE_LIST&id="+id, 
-            success: function(result){
-                $("#flbl").html(result);
-                if ($('.js-compare-products-carousel').length) {
-                    $('.js-compare-products-carousel .block-line').slick({
-                        slidesToShow: 5,
-                        slidesToScroll: 1,
-                        arrows: true,
-                        dots: false,
-                        infinite: true,
-                        responsive: [
-                            {
-                                breakpoint: 1024,
-                                settings: {
-                                    slidesToShow: 3
-                                }
-                            },
-                            {
-                                breakpoint: 769,
-                                settings: {
-                                    slidesToShow: 1
-                                }
-                            }
-                        ]
-                    });
-                }
-            }
-        });    
-    }
-    
-    $('.flyBlock').show();
-}
-
-function init() {
   if ($('.product__image').length) {
     $('.product__image--main').slick({
       arrows:false,
@@ -511,10 +523,11 @@ function init() {
       
     });
   }
+});
+
+function init() {
+  
 }
 
 init();
 BX.addCustomEvent('onAjaxSuccess', init); 
-
-
-});

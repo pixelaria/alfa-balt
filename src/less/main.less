@@ -15,8 +15,8 @@ body {
   color: #4d4d4d;
 
   min-width: 320px !important;
-
 }
+
 html {
   min-width: 320px !important;
 }
@@ -47,6 +47,10 @@ p {
 
   background-color: #ffffff;
   
+  &--text {
+    line-height: 1.75;
+  }
+
   &--page {
     padding-top: 30px;
 
@@ -7835,5 +7839,40 @@ div[id^="wait_comp"], .bx-core-waitwindow {
   @media @mobiles {
     width:90% !important;
     top:1% !important;
+  }
+}
+
+.ol {
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-weight: 800;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.pull {
+  &--left {
+    float:left;
+  }
+  &--right {
+
+    float: right;
+  }
+
+  @media @mobiles {
+    float: none;
+  }
+}
+
+.table__results {
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
   }
 }
