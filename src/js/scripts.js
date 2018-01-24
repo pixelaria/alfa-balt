@@ -89,14 +89,19 @@ function onLoadjqm(hash){
   }
 
   if(name == 'callprice'){
+    console.log('callprice');
     if($(hash.t).data('product')) {
       var product = $(hash.t).data('product');
-      var box = $(hash.t).data('box');
-      if(box) {
-        product = product + ' (' + box + ')'; 
+      console.log(product);
+      var type = $(hash.t).data('product-type');
+      if(type) {
+        product = product + ' (' + type + ')'; 
+        console.log(product);
       }
       $('input[name="PRODUCT"]').val(product);
       $('input[name="PRODUCT"]').parent().hide();
+
+      console.log( $('input[name="PRODUCT"]').val());
     }
 
     if($(hash.t).data('title')) {
@@ -104,7 +109,7 @@ function onLoadjqm(hash){
     }
 
     if($(hash.t).data('product-type')) {
-      $('.popup__body').prepend('<hr/>');
+      $('.popup__body').prepend('<hr style="margin-bottom:30px;"/>');
       $('.popup__body').prepend('<p class="popup__info">Исполнение: <span>'+$(hash.t).data('product-type')+'</span></p>');
       $('.popup__body').prepend('<p class="popup__info popup__info--full">'+$(hash.t).data('product')+'</p>');
     }
@@ -316,8 +321,12 @@ $(function (){
 
 
   $('.product-types__type').click(function(e){
+    var type = $(this).data('type');
     $('.product-types__type').removeClass('product-types__type--active');
     $(this).addClass('product-types__type--active');
+
+    $('#product__btn').data('product-type',type);
+
   });
 
   if ($('.slider--images').length) {
